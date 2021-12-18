@@ -79,14 +79,15 @@ header li {
 
 header a {
     display: block;
-    color: #3498db;
+    color: #8234db;
     padding: 10px
 }
 
 header a:hover {
-    color: #217dbb;
+    color: #f6f9fa;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     text-decoration: none;
-    background: #eee;
+    background: rgb(80, 79, 79);
     border-radius: 4px
 }
 
@@ -205,14 +206,26 @@ footer {
     color: #fff;
     padding: 15px 25px;
     border: 3px solid #fff;
+    background: #fff;
     border-radius: 30px;
-    transition: .5s ease all
+    transition: .5s ease all;
 }
 
 .btn-rounded-white:hover {
-    color: #3498db;
-    background: #fff;
+    color: #7a8d99;
+    background: rgb(79, 201, 140);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px gray;
     text-decoration: none
+}
+
+.fa {
+    color: white;
+    font-size: 20px;
+}
+
+.fa:hover {
+    opacity: 0.3;
+    color: black;
 }
 
 .shadow {
