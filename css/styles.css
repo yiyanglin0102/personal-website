@@ -55,22 +55,24 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    text-align: center;
+    text-align: left;
     z-index: 10;
     animation-name: dropHeader;
     animation-iteration-count: 1;
     animation-timing-function: ease;
-    animation-duration: 0.75s
+    animation-duration: 1.5s
 }
 
 header ul {
     display: inline-block;
     background: #fff;
     text-align: center;
+    /* border-left-width: 100em;
+    border-right-width: 100em; */
     padding: 10px;
     margin: 0;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px
 }
 
 header li {
@@ -79,8 +81,8 @@ header li {
 
 header a {
     display: block;
-    color: #8234db;
-    padding: 10px
+    color: #723ab3;
+    padding: 20px
 }
 
 header a:hover {
@@ -120,7 +122,7 @@ header.sticky {
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: #fff
+    background: rgb(100, 99, 99)
 }
 
 #mobile-menu-close {
@@ -209,6 +211,7 @@ footer {
     background: #fff;
     border-radius: 30px;
     transition: .5s ease all;
+    transform: translate(0%, 20%);
 }
 
 .btn-rounded-white:hover {
@@ -226,6 +229,50 @@ footer {
 .fa:hover {
     opacity: 0.3;
     color: black;
+}
+
+.fa-linkedin {
+    background: #fff;
+    color: rgb(69, 122, 178);
+    border-radius: 10px;
+    border: 4px dotted #fff;
+    font-size: 50px;
+}
+
+.fa-github {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    border: 4px dotted #fff;
+    font-size: 50px;
+}
+
+.fa-facebook {
+    background: #fff;
+    color: #3B5998;
+    border-radius: 10px;
+    border: 4px dotted #fff;
+    border-left-width: 16px;
+    border-right-width: 5px;
+    font-size: 50px;
+}
+
+.fa-envelope-square {
+    background: rgb(90, 88, 88);
+    color: #fff;
+    border-radius: 10px;
+    border: 4px dotted rgb(90, 88, 88);
+    font-size: 50px;
+}
+
+.fa-mobile-phone {
+    background: #fff;
+    color: rgb(90, 88, 88);
+    border-radius: 10px;
+    border: 4px dotted #fff;
+    border-left-width: 12.5px;
+    border-right-width: 12.5px;
+    font-size: 50px;
 }
 
 .shadow {
