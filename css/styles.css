@@ -45,6 +45,7 @@ body.active {
     0% {
         transform: translateY(-100%)
     }
+
     100% {
         transform: translateY(0)
     }
@@ -257,6 +258,16 @@ footer {
     font-size: 50px;
 }
 
+.fa-line {
+    background: #fff;
+    color: rgb(85, 190, 68);
+    border-radius: 10px;
+    border: 4px dotted #fff;
+    border-left-width: 4px;
+    border-right-width: 3px;
+    font-size: 50px;
+}
+
 .fa-envelope-square {
     background: rgb(90, 88, 88);
     color: #fff;
@@ -269,9 +280,9 @@ footer {
     background: #fff;
     color: rgb(90, 88, 88);
     border-radius: 10px;
-    border: 4px dotted #fff;
-    border-left-width: 12.5px;
-    border-right-width: 12.5px;
+    border: 3px dotted #fff;
+    border-left-width: 11px;
+    border-right-width: 11px;
     font-size: 50px;
 }
 
@@ -392,9 +403,11 @@ footer {
     0% {
         transform: scale(1, 1)
     }
+
     50% {
         transform: scale(1.2, 1.2)
     }
+
     100% {
         transform: scale(1, 1)
     }
@@ -776,10 +789,12 @@ footer {
 }
 
 @media only screen and (max-width: 750px) {
+
     #experience-timeline:before,
     #experience-timeline:after {
         left: 23px
     }
+
     .vtimeline-date {
         width: auto;
         text-align: left;
@@ -788,9 +803,11 @@ footer {
         display: block;
         margin-left: 70px
     }
+
     .vtimeline-icon {
         margin-left: 0
     }
+
     .vtimeline-content {
         margin-left: 70px
     }
@@ -803,21 +820,26 @@ footer {
         max-height: auto;
         padding: 100px 15px
     }
+
     #lead-content {
         position: relative;
         transform: none;
         left: auto;
         top: auto
     }
+
     #lead-content h1 {
         font-size: 3em
     }
+
     #lead-content h2 {
         font-size: 1.75em
     }
+
     #about {
         text-align: center
     }
+
     #about p {
         text-align: left
     }
@@ -832,10 +854,12 @@ footer {
         bottom: 0;
         height: 100%
     }
+
     #mobile-menu-open,
     #mobile-menu-close {
         display: block
     }
+
     #menu {
         height: 100%;
         overflow-y: auto;
@@ -843,29 +867,37 @@ footer {
         border-radius: 0;
         width: 100%
     }
+
     #menu li {
         display: block;
         margin-bottom: 10px
     }
+
     #lead-content h1 {
         font-size: 2em
     }
+
     #lead-content h2 {
         font-size: 1.3em
     }
+
     #lead-content a {
         padding: 10px 20px
     }
+
     #lead-down {
         display: none
     }
+
     .education-block h3,
     .education-block span {
         float: none
     }
+
     .project-image {
         display: none
     }
+
     .project-info {
         position: relative;
         margin: 0;
@@ -873,9 +905,11 @@ footer {
         top: auto;
         transform: none
     }
+
     footer {
         text-align: center
     }
+
     .social {
         text-align: center
     }
@@ -885,9 +919,11 @@ footer {
     #lead-content h1 {
         font-size: 1.5em
     }
+
     #lead-content h2 {
         font-size: 1em
     }
+
     #lead-content a {
         font-size: 0.9em;
         padding: 5px 10px
