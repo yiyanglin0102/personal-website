@@ -222,6 +222,22 @@ footer {
     text-decoration: none
 }
 
+.btn-rounded-white-1 {
+    color: #fff;
+    background: #fff;
+    border-radius: 10px;
+    transition: .5s ease all;
+    transform: translate(0%, 20%);
+}
+
+.btn-rounded-white-1:hover {
+    color: #7a8d99;
+    background: rgb(79, 201, 140);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px gray;
+    text-decoration: none
+}
+
+
 .fa {
     color: white;
     font-size: 20px;
@@ -928,4 +944,15 @@ footer {
         font-size: 0.9em;
         padding: 5px 10px
     }
+}
+
+.btn-muted {
+    color: #000;
+    border-color: #000;
+}
+
+.btn-muted:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
 }
