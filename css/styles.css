@@ -1,3 +1,32 @@
+.profile-container {
+    display: flex;
+    align-items: center;
+    /* Vertically center the content */
+}
+
+.profile-image {
+    flex: 1;
+    /* Expand to fill available space */
+    margin-right: 20px;
+    /* Add some space between the image and text */
+}
+
+.profile-image img {
+    max-width: 130%;
+    /* Ensure the image doesn't exceed its container */
+    border-radius: 80%;
+    /* Makes the image round (adjust as needed) */
+    border: 2px solid #fff;
+    /* Add a white border (adjust as needed) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Add a shadow (adjust as needed) */
+}
+
+.profile-text {
+    flex: 2;
+    /* Expand to fill available space */
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px
@@ -274,6 +303,15 @@ footer {
     font-size: 50px;
 }
 
+.fa-instagram {
+    background: #fff; /* Background color */
+    color: #3B5998; /* Icon color */
+    border-radius: 10px; /* Rounded corners */
+    border: 4px dotted #fff; /* Border style */
+    border-left-width: 6px; /* Adjust left border width as needed */
+    border-right-width: 5px; /* Adjust right border width as needed */
+    font-size: 50px; /* Icon size */
+  }
 .fa-line {
     background: #fff;
     color: rgb(85, 190, 68);
