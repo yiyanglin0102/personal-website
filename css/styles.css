@@ -304,14 +304,50 @@ footer {
 }
 
 .fa-instagram {
-    background: #fff; /* Background color */
-    color: #3B5998; /* Icon color */
-    border-radius: 10px; /* Rounded corners */
-    border: 4px dotted #fff; /* Border style */
-    border-left-width: 6px; /* Adjust left border width as needed */
-    border-right-width: 5px; /* Adjust right border width as needed */
-    font-size: 50px; /* Icon size */
-  }
+    background: #fff;
+    /* Background color */
+    color: #C93E57;
+    /* Icon color */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px dotted #fff;
+    /* Border style */
+    border-left-width: 6px;
+    /* Adjust left border width as needed */
+    border-right-width: 5px;
+    /* Adjust right border width as needed */
+    font-size: 50px;
+    /* Icon size */
+}
+
+.fa-weixin {
+    background: #fff;
+    /* Background color */
+    color: #5DB836;
+    border-radius: 10px;
+    /* border: 0.5px dotted #fff; */
+    border-left-width: 4px;
+    border-right-width: 3px;
+    font-size: 50px;
+}
+
+.fa-whatsapp {
+    background: #fff;
+    /* Background color */
+    color: #67B75E;
+    /* Icon color */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px dotted #fff;
+    /* Border style */
+    border-left-width: 6px;
+    /* Adjust left border width as needed */
+    border-right-width: 5px;
+    /* Adjust right border width as needed */
+    font-size: 50px;
+    /* Icon size */
+}
+
 .fa-line {
     background: #fff;
     color: rgb(85, 190, 68);
@@ -334,7 +370,7 @@ footer {
     background: #fff;
     color: rgb(90, 88, 88);
     border-radius: 10px;
-    border: 3px dotted #fff;
+    border: 2px dotted #fff;
     border-left-width: 11px;
     border-right-width: 11px;
     font-size: 50px;
