@@ -1,0 +1,636 @@
+/* src/App.css */
+
+:root {
+  --radius: 18px;
+  --radius2: 24px;
+
+  /* Your preferred desktop canvas width */
+  --max: 1076px;
+
+  /* defaults (overridden by data-theme) */
+  --bg: #0b0f17;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel2: rgba(255, 255, 255, 0.08);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.65);
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  --accentA: rgba(87, 117, 255, 0.75);
+  --accentB: rgba(255, 140, 0, 0.35);
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+  --bg: #0b0f17;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel2: rgba(255, 255, 255, 0.08);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.65);
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  --bg: #f6f7fb;
+  --panel: rgba(10, 14, 22, 0.06);
+  --panel2: rgba(10, 14, 22, 0.09);
+  --text: rgba(10, 14, 22, 0.92);
+  --muted: rgba(10, 14, 22, 0.62);
+  --border: rgba(10, 14, 22, 0.14);
+  --shadow: 0 18px 45px rgba(10, 14, 22, 0.10);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+a { color: inherit; text-decoration: none; }
+.container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+.muted { color: var(--muted); }
+.sep { opacity: 0.5; padding: 0 10px; }
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.nav__brand {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accentA), var(--accentB));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  font-weight: 800;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  padding: 9px 10px;
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+.nav__link:hover { background: var(--panel); color: var(--text); }
+
+.nav__controls {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.control {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 9px 10px;
+  font: inherit;
+}
+
+.control--btn { cursor: pointer; }
+.control:hover { background: var(--panel2); }
+
+/* =====================
+   HERO (FORCED 2-COLUMN)
+===================== */
+
+/* Scale wrapper: keeps both left/right visible instead of stacking */
+.hero-scale {
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+}
+
+/* Force a two-column layout ALWAYS on desktop */
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Prevent overflow from forcing reflow */
+.hero__left,
+.hero__right {
+  min-width: 0;
+}
+
+.pill {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hero__title {
+  margin: 12px 0 0;
+  font-size: clamp(38px, 6vw, 66px);
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+
+.dot { color: color-mix(in srgb, rgba(255, 140, 0, 0.95) 85%, var(--text)); }
+
+.hero__tagline {
+  margin: 10px 0 16px;
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 55ch;
+}
+
+.hero__meta { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+
+.hero__actions { display: flex; gap: 12px; margin: 14px 0 12px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+}
+
+.btn:hover { background: var(--panel2); }
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--accentA), var(--accentB));
+  border: 1px solid color-mix(in srgb, var(--border) 55%, transparent);
+}
+
+.socials { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+
+.social {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--muted);
+}
+
+.social:hover { color: var(--text); background: var(--panel); }
+
+.heroCard {
+  border-radius: var(--radius2);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 65%, transparent);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  /* Contain the right column so it doesn't force wrap */
+  max-width: 520px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.heroCard__top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel2) 65%, transparent);
+}
+
+.heroCard__name { font-weight: 800; }
+.heroCard__body { padding: 14px 16px 16px; display: grid; gap: 12px; }
+
+.stat__k { color: var(--muted); font-size: 12px; }
+.stat__v { margin-top: 2px; }
+
+/* PROFILE AVATAR */
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accentA), var(--accentB));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: grid;
+  place-items: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =====================
+   SECTIONS (aligned & divided)
+===================== */
+
+.section { padding: 26px 0; }
+
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+
+.section__surface {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 85%, transparent);
+  border-radius: var(--radius2);
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.section__head { margin-bottom: 16px; }
+.section__title { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+.section__subtitle { margin: 8px 0 0; color: var(--muted); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.p { margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
+
+.panel {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: var(--radius2);
+  padding: 16px;
+}
+
+.panel__title { margin: 0 0 10px; }
+
+/* PROJECTS */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+.card {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  border-radius: var(--radius2);
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: grid;
+  gap: 12px;
+  min-height: 190px;
+}
+
+.card:hover { background: var(--panel2); }
+
+.card__title { margin: 0; font-size: 16px; }
+
+.card__desc { margin: 8px 0 0; color: var(--muted); line-height: 1.55; }
+
+.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.tag {
+  font-size: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel2) 60%, transparent);
+  padding: 6px 9px;
+  border-radius: 999px;
+}
+
+.card__links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.link:hover { text-decoration: underline; }
+
+/* EXPERIENCE */
+.timeline { display: grid; gap: 14px; }
+
+.timeline__item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  background: var(--panel);
+  padding: 16px;
+}
+
+.timeline__meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.timeline__role { font-weight: 800; }
+.timeline__period { margin-top: 6px; color: var(--muted); font-size: 13px; }
+
+.list { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+.list__item { margin: 8px 0; line-height: 1.55; }
+
+/* CONTACT */
+.contact { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+
+/* FOOTER */
+.footer {
+  padding: 26px 0 40px;
+  border-top: 1px solid var(--border);
+  margin-top: 28px;
+}
+
+.footer__inner { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.15s; }
+.fade-in.delay-2 { animation-delay: 0.3s; }
+.fade-in.delay-3 { animation-delay: 0.45s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { animation: none; opacity: 1; transform: none; }
+}
+
+/* SQUARESPACE-LIKE BUTTON */
+.sqs-block-button-element {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.2s ease;
+}
+
+.sqs-block-button-element--medium {
+  padding: 14px 28px;
+  font-size: 14px;
+}
+
+.sqs-button-element--primary {
+  background: linear-gradient(135deg, var(--accentA), var(--accentB));
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.sqs-button-element--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.sqs-button-element--primary:active { transform: translateY(0); }
+
+/* CONTACT FORM */
+.contact-form { max-width: 520px; }
+.contact-form form { display: grid; gap: 14px; }
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--muted);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: color-mix(in srgb, var(--accentA) 60%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accentA) 20%, transparent);
+  background: var(--panel2);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+/* Normal responsive collapse for content sections */
+@media (max-width: 960px) {
+  .cards { grid-template-columns: 1fr; }
+  .grid2 { grid-template-columns: 1fr; }
+}
+
+/* Phone nav + section padding */
+@media (max-width: 560px) {
+  .container { width: calc(100% - 24px); }
+
+  .nav__inner {
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "brand controls"
+      "links links";
+  }
+
+  .nav__brand { grid-area: brand; }
+  .nav__controls { grid-area: controls; }
+
+  .nav__links {
+    grid-area: links;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-top: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav__link { white-space: nowrap; }
+
+  .hero { padding-top: 28px; }
+
+  .hero__actions .btn,
+  .hero__actions .sqs-block-button-element {
+    width: 100%;
+  }
+
+  .section__surface {
+    padding: 14px;
+    border-radius: 18px;
+  }
+}
+
+/* =====================
+   FORCE SCALE (desktop)
+   Keeps left/right visible instead of stacking vertically.
+   Tweak these scale values to taste.
+===================== */
+
+@media (max-width: 1200px) {
+  .hero-scale { transform: scale(0.92); }
+}
+
+@media (max-width: 1080px) {
+  .hero-scale { transform: scale(0.88); }
+}
+
+@media (max-width: 980px) {
+  .hero-scale { transform: scale(0.84); }
+}
+
+@media (max-width: 860px) {
+  .hero-scale { transform: scale(0.8); }
+}
+
+/* Optional: for very small phones, allow stacking (recommended UX).
+   If you truly want NEVER stack, delete this block. */
+@media (max-width: 680px) {
+  .hero-scale { transform: none; }
+  .hero__inner { grid-template-columns: 1fr; }
+  .heroCard { margin-left: 0; max-width: 100%; }
+}
+
+/* HERO surface to align with Section surfaces */
+.heroSurface {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 85%, transparent);
+  border-radius: var(--radius2);
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+/* Keep hero padding consistent with sections */
+.hero {
+  padding: 26px 0; /* match .section padding */
+}
+
+/* =====================
+   CONTACT SPLIT LAYOUT
+===================== */
+
+.contactSplit {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contactTitle {
+  margin: 0 0 10px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.contactDesc {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+/* Keep form aligned nicely */
+.contactRight form {
+  display: grid;
+  gap: 14px;
+}
+
+/* Mobile fallback */
+@media (max-width: 860px) {
+  .contactSplit {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* =====================
+   BUTTON HOVER STATES
+===================== */
+
+.sqs-block-button-element {
+  position: relative;
+  will-change: transform, box-shadow;
+}
+
+/* Hover */
+.sqs-button-element--primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.28),
+    0 0 0 1px color-mix(in srgb, var(--accentA) 45%, transparent);
+}
+
+/* Active (click) */
+.sqs-button-element--primary:active {
+  transform: translateY(0);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+/* Keyboard focus (accessibility) */
+.sqs-button-element--primary:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--accentA) 35%, transparent),
+    0 12px 32px rgba(0, 0, 0, 0.25);
+}
+/* Secondary button hover */
+.btn:hover {
+  background: var(--panel2);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--border) 60%, transparent);
+}
+
+.sqs-button-element--primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.sqs-button-element--primary:hover::after {
+  opacity: 1;
+}
