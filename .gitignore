@@ -1,4 +1,140 @@
-node_modules/
+# ==================== #
+#  General Exclusions  #
+# ==================== #
 
-# macOS
+# OS/Editor files
 .DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*.sw*
+*.code-workspace
+
+# IDE/Editor specific
+.idea/
+.vscode/
+
+# Logs and diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+logs/
+.DS_Store
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+*.pid
+*.seed
+*.pid.lock
+pids/
+
+# Dependencies
+node_modules/
+jspm_packages/
+bower_components/
+/.pnp
+.pnp.js
+.yarn-integrity
+
+# Build artifacts
+build/
+dist/
+.next/
+.nuxt/
+.out/
+.serverless/
+.history/
+.fusebox/
+build/Release
+
+# Cache files
+.cache/
+.npm
+.eslintcache
+*.tsbuildinfo
+.grunt
+.lock-wscript
+.node_repl_history
+
+# TypeScript
+typings/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Packages
+*.tgz
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Testing/Coverage
+coverage/
+.nyc_output/
+*.lcov
+*.coverage
+lib-cov/
+
+# ==================== #
+#  Amplify-Specific    #
+# ==================== #
+
+# Sensitive Amplify files
+amplify/team-provider-info.json
+amplify/.config/local-*
+amplify/\#current-cloud-backend*
+amplify/backend/amplify-meta.json
+
+# Auto-generated configs
+awsconfiguration.json
+amplifyconfiguration.json
+amplify-build-config.json
+amplify-gradle-config.json
+amplifytools.xcconfig
+amplify_outputs.json
+
+# Temporary files
+amplify/logs/
+amplify/mock-data/
+amplify/mock-api-resources/
+amplify/backend/.temp/
+amplify/backend/awscloudformation/
+amplify/backend/amplify-build/
+
+# Generated code
+src/ui-components/
+src/api/
+amplify/backend/api/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+#amplify-do-not-edit-begin
+amplify/\#current-cloud-backend
+amplify/.config/local-*
+amplify/logs
+amplify/mock-data
+amplify/mock-api-resources
+amplify/backend/amplify-meta.json
+amplify/backend/.temp
+build/
+dist/
+node_modules/
+awsconfiguration.json
+amplifyconfiguration.json
+amplifyconfiguration.dart
+amplify-build-config.json
+amplify-gradle-config.json
+amplifytools.xcconfig
+.secret-*
+**.sample
+#amplify-do-not-edit-end
