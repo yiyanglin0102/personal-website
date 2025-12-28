@@ -1,3 +1,4 @@
+// src/App.js
 import React from "react";
 import "./styles/App.css";
 import Navbar from "./components/Navbar";
@@ -5,11 +6,18 @@ import Section from "./components/Section";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer";
 
-import { profile, about, projects, experience, contact } from "./data";
+import {
+  profile,
+  about,
+  projects,
+  experience,
+  contact,
+  education,
+} from "./data";
 import { LangContext } from "./providers";
 import { t } from "./i18n";
 
-// Helper: supports either a plain string/array OR {en, zh, fr}
+// Helper: supports either a plain string/array OR {en, zh, fr: ...}
 function pickLang(value, lang, fallback = "en") {
   if (value == null) return value;
   if (typeof value === "string") return value;
@@ -20,10 +28,27 @@ function pickLang(value, lang, fallback = "en") {
 export default function App() {
   const { lang } = React.useContext(LangContext);
 
+  // Convert vertical mouse wheel to horizontal scroll on Projects row
+  React.useEffect(() => {
+    const el = document.querySelector(".cardsScroll");
+    if (!el) return;
+
+    const onWheel = (e) => {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      el.scrollLeft += e.deltaY;
+    };
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
+
+  // NAV (added education)
   const navLinks = [
     { label: t(lang, "nav_about"), href: "#about" },
     { label: t(lang, "nav_projects"), href: "#projects" },
     { label: t(lang, "nav_experience"), href: "#experience" },
+    { label: t(lang, "nav_education"), href: "#education" },
     { label: t(lang, "nav_contact"), href: "#contact" },
   ];
 
@@ -41,8 +66,6 @@ export default function App() {
   // Contact now has per-language strings
   const contactHeadline =
     pickLang(contact.headline, lang) ?? t(lang, "nav_contact");
-  const contactBody = pickLang(contact.body, lang) ?? t(lang, "contact_body");
-  const contactCta = pickLang(contact.ctaLabel, lang) ?? t(lang, "contact_cta");
 
   const highlightsLabel =
     lang === "zh" ? "重點" : lang === "fr" ? "Points forts" : "Highlights";
@@ -51,29 +74,26 @@ export default function App() {
     <div className="app" id="top">
       <Navbar links={navLinks} />
 
-      {/* HERO (forced 2-column with scale wrapper in CSS) */}
+      {/* HERO */}
       <main className="hero">
         <div className="container hero-scale">
           <div className="hero__inner">
-            <div className="hero__left fade-in delay-1">
-              <p className="pill">{t(lang, "hero_title")}</p>
+            <div className="hero__left">
+              {/* NOTE: Don't call t(lang, profileTitle). profileTitle is already localized text */}
+              <p className="pill">{profileTitle}</p>
 
-              <h1 className="hero__title fade-in delay-2">
+              <h1 className="hero__title">
                 {profileName}
                 <span className="dot">.</span>
               </h1>
 
-              <p className="hero__tagline fade-in delay-3">{profileTagline}</p>
+              <p className="hero__tagline">{profileTagline}</p>
 
-              <div className="hero__meta fade-in delay-3">
+              <div className="hero__meta">
                 <span className="muted">{profileLocation}</span>
-                <span className="sep">•</span>
-                <a className="link" href={`mailto:${profile.email}`}>
-                  {profile.email}
-                </a>
               </div>
 
-              <div className="hero__actions fade-in delay-3">
+              <div className="hero__actions">
                 <a
                   className="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element"
                   href="#projects"
@@ -82,13 +102,13 @@ export default function App() {
                 </a>
                 <a
                   className="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element"
-                  href={`mailto:${profile.email}`}
+                  href="#contact"
                 >
                   {t(lang, "hero_cta_contact")}
                 </a>
               </div>
 
-              <div className="socials fade-in delay-3">
+              <div className="socials">
                 {profile.socials.map((s) => (
                   <a
                     key={s.href}
@@ -103,7 +123,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="hero__right fade-in delay-2">
+            <div className="hero__right">
               <div className="heroCard">
                 <div className="heroCard__top">
                   <div className="avatar" aria-label="profile picture">
@@ -194,16 +214,18 @@ export default function App() {
         </div>
       </Section>
 
-      {/* PROJECTS */}
+      {/* PROJECTS (horizontal scroll always) */}
       <Section
         id="projects"
         title={t(lang, "nav_projects")}
         subtitle={t(lang, "projects_subtitle")}
       >
-        <div className="cards">
-          {projects.map((p, idx) => (
-            <ProjectCard key={idx} project={p} />
-          ))}
+        <div className="cardsScroll">
+          <div className="cardsRow">
+            {projects.map((p, idx) => (
+              <ProjectCard key={idx} project={p} />
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -213,6 +235,7 @@ export default function App() {
           {experience.map((e, idx) => {
             const role = pickLang(e.role, lang) ?? "";
             const bullets = pickLang(e.bullets, lang) ?? [];
+
             return (
               <div key={idx} className="timeline__item">
                 <div className="timeline__meta">
@@ -235,11 +258,44 @@ export default function App() {
         </div>
       </Section>
 
-      {/* CONTACT */}
+      {/* EDUCATION */}
+      <Section id="education" title={t(lang, "nav_education")}>
+        <div className="timeline">
+          {education.map((e, idx) => {
+            const degree = pickLang(e.degree, lang) ?? "";
+            const details = pickLang(e.details, lang) || [];
+
+            return (
+              <div key={idx} className="timeline__item">
+                <div className="timeline__meta">
+                  <div className="timeline__role">{degree}</div>
+                  <div className="muted">{pickLang(e.school, lang)}</div>
+                </div>
+
+                <div className="timeline__period">{e.period}</div>
+
+                {details.length > 0 && (
+                  <ul className="list">
+                    {(Array.isArray(details) ? details : [details]).map(
+                      (d, i) => (
+                        <li key={i} className="list__item">
+                          {d}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+
+      {/* CONTACT (left title + right form) */}
       <Section id="contact" title={contactHeadline}>
         <div className="contactSplit">
           {/* LEFT */}
-          <div className="contactLeft fade-in delay-1">
+          <div className="contactLeft">
             <h3 className="contactTitle">
               {lang === "zh"
                 ? "聯絡我"
@@ -258,7 +314,7 @@ export default function App() {
           </div>
 
           {/* RIGHT */}
-          <div className="contactRight fade-in delay-2">
+          <div className="contactRight">
             <form method="POST" action="https://formspree.io/f/mzbkoayg">
               <input
                 type="hidden"
