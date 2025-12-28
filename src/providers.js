@@ -1,5 +1,6 @@
 // src/providers.js
 import React from "react";
+import { normalizeLang } from "./i18n";
 
 const THEME_KEY = "portfolio_theme";
 const LANG_KEY = "portfolio_lang";
@@ -23,7 +24,11 @@ export function Providers({ children }) {
 
   React.useEffect(() => {
     localStorage.setItem(LANG_KEY, lang);
+    // HTML lang should be valid BCP-47; keep full code (zh-TW etc.)
     document.documentElement.setAttribute("lang", lang);
+
+    // Optional: add dir="rtl" for Arabic
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
   }, [lang]);
 
   const valueTheme = React.useMemo(() => ({ theme, setTheme }), [theme]);

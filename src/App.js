@@ -17,12 +17,34 @@ import {
 import { LangContext } from "./providers";
 import { t } from "./i18n";
 
-// Helper: supports either a plain string/array OR {en, zh, fr: ...}
+// Helper: supports either plain string/array OR {en, zh-TW, zh-CN, fr...}
 function pickLang(value, lang, fallback = "en") {
   if (value == null) return value;
   if (typeof value === "string") return value;
   if (Array.isArray(value)) return value;
-  return value[lang] ?? value[fallback] ?? Object.values(value)[0];
+
+  // object with language keys
+  const exact = value?.[lang];
+  if (exact != null) return exact;
+
+  // Chinese fallback rules
+  if (lang === "zh-TW")
+    return (
+      value["zh-TW"] ??
+      value["zh"] ??
+      value[fallback] ??
+      Object.values(value)[0]
+    );
+  if (lang === "zh-CN")
+    return (
+      value["zh-CN"] ??
+      value["zh"] ??
+      value[fallback] ??
+      Object.values(value)[0]
+    );
+
+  // generic fallback
+  return value[fallback] ?? value.en ?? Object.values(value)[0];
 }
 
 export default function App() {
