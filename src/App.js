@@ -6,14 +6,7 @@ import Section from "./components/Section";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer";
 
-import {
-  profile,
-  about,
-  projects,
-  experience,
-  contact,
-  education,
-} from "./data";
+import { profile, about, projects, experience, contact, education } from "./data";
 import { LangContext } from "./providers";
 import { t } from "./i18n";
 
@@ -35,6 +28,7 @@ function pickLang(value, lang, fallback = "en") {
       value[fallback] ??
       Object.values(value)[0]
     );
+
   if (lang === "zh-CN")
     return (
       value["zh-CN"] ??
@@ -65,7 +59,7 @@ export default function App() {
     return () => el.removeEventListener("wheel", onWheel);
   }, []);
 
-  // NAV (added education)
+  // NAV
   const navLinks = [
     { label: t(lang, "nav_about"), href: "#about" },
     { label: t(lang, "nav_projects"), href: "#projects" },
@@ -74,23 +68,20 @@ export default function App() {
     { label: t(lang, "nav_contact"), href: "#contact" },
   ];
 
-  // Profile fields may be tri-language objects now
+  // Profile fields
   const profileName = pickLang(profile.name, lang) ?? "";
   const profileTitle = pickLang(profile.title, lang) ?? "";
   const profileTagline = pickLang(profile.tagline, lang) ?? "";
   const profileLocation = pickLang(profile.location, lang) ?? "";
 
-  // About now has per-language arrays/strings
+  // About
   const aboutHeadline = pickLang(about.headline, lang) ?? t(lang, "nav_about");
   const aboutBody = pickLang(about.body, lang) ?? [];
   const aboutHighlights = pickLang(about.highlights, lang) ?? [];
 
-  // Contact now has per-language strings
+  // Contact section title (Section component title)
   const contactHeadline =
     pickLang(contact.headline, lang) ?? t(lang, "nav_contact");
-
-  const highlightsLabel =
-    lang === "zh" ? "重點" : lang === "fr" ? "Points forts" : "Highlights";
 
   return (
     <div className="app" id="top">
@@ -101,7 +92,6 @@ export default function App() {
         <div className="container hero-scale">
           <div className="hero__inner">
             <div className="hero__left">
-              {/* NOTE: Don't call t(lang, profileTitle). profileTitle is already localized text */}
               <p className="pill">{profileTitle}</p>
 
               <h1 className="hero__title">
@@ -163,42 +153,18 @@ export default function App() {
 
                 <div className="heroCard__body">
                   <div className="stat">
-                    <div className="stat__k">
-                      {lang === "zh"
-                        ? "重點"
-                        : lang === "fr"
-                        ? "Focus"
-                        : "Focus"}
-                    </div>
-                    <div className="stat__v">React • Systems • Performance</div>
+                    <div className="stat__k">{t(lang, "stat_focus_k")}</div>
+                    <div className="stat__v">{t(lang, "stat_focus_v")}</div>
                   </div>
 
                   <div className="stat">
-                    <div className="stat__k">
-                      {lang === "zh"
-                        ? "目標"
-                        : lang === "fr"
-                        ? "Ouvert à"
-                        : "Open to"}
-                    </div>
-                    <div className="stat__v">
-                      {lang === "zh"
-                        ? "前端 / 全端職缺"
-                        : lang === "fr"
-                        ? "Postes Frontend / Full-stack"
-                        : "Frontend / Full-Stack roles"}
-                    </div>
+                    <div className="stat__k">{t(lang, "stat_open_k")}</div>
+                    <div className="stat__v">{t(lang, "stat_open_v")}</div>
                   </div>
 
                   <div className="stat">
-                    <div className="stat__k">
-                      {lang === "zh"
-                        ? "時區"
-                        : lang === "fr"
-                        ? "Fuseau horaire"
-                        : "Timezone"}
-                    </div>
-                    <div className="stat__v">Asia/Taipei (UTC+8)</div>
+                    <div className="stat__k">{t(lang, "stat_tz_k")}</div>
+                    <div className="stat__v">{t(lang, "stat_tz_v")}</div>
                   </div>
                 </div>
               </div>
@@ -211,17 +177,15 @@ export default function App() {
       <Section id="about" title={aboutHeadline}>
         <div className="grid2">
           <div>
-            {(Array.isArray(aboutBody) ? aboutBody : [aboutBody]).map(
-              (p, i) => (
-                <p key={i} className="p">
-                  {p}
-                </p>
-              )
-            )}
+            {(Array.isArray(aboutBody) ? aboutBody : [aboutBody]).map((p, i) => (
+              <p key={i} className="p">
+                {p}
+              </p>
+            ))}
           </div>
 
           <div className="panel">
-            <h3 className="panel__title">{highlightsLabel}</h3>
+            <h3 className="panel__title">{t(lang, "highlights_label")}</h3>
             <ul className="list">
               {(Array.isArray(aboutHighlights)
                 ? aboutHighlights
@@ -257,7 +221,6 @@ export default function App() {
           {experience.map((e, idx) => {
             const role = pickLang(e.role, lang) ?? "";
             const bullets = pickLang(e.bullets, lang) ?? [];
-
             return (
               <div key={idx} className="timeline__item">
                 <div className="timeline__meta">
@@ -286,12 +249,13 @@ export default function App() {
           {education.map((e, idx) => {
             const degree = pickLang(e.degree, lang) ?? "";
             const details = pickLang(e.details, lang) || [];
+            const school = pickLang(e.school, lang) ?? "";
 
             return (
               <div key={idx} className="timeline__item">
                 <div className="timeline__meta">
                   <div className="timeline__role">{degree}</div>
-                  <div className="muted">{pickLang(e.school, lang)}</div>
+                  <div className="muted">{school}</div>
                 </div>
 
                 <div className="timeline__period">{e.period}</div>
@@ -318,26 +282,13 @@ export default function App() {
         <div className="contactSplit">
           {/* LEFT */}
           <div className="contactLeft">
-            <h3 className="contactTitle">
-              {lang === "zh"
-                ? "聯絡我"
-                : lang === "fr"
-                ? "Entrer en contact"
-                : "GET IN TOUCH"}
-            </h3>
-
-            <p className="contactDesc">
-              {lang === "zh"
-                ? "有合作想法或問題，歡迎隨時留言。"
-                : lang === "fr"
-                ? "Une idée, un projet ou une question ? Écrivez-moi."
-                : "Have a project, idea, or question? Feel free to reach out."}
-            </p>
+            <h3 className="contactTitle">{t(lang, "contact_title")}</h3>
+            <p className="contactDesc">{t(lang, "contact_desc")}</p>
           </div>
 
           {/* RIGHT */}
           <div className="contactRight">
-            <form method="POST" action="https://formspree.io/f/mzbkoayg">
+            <form method="POST" action={contact.formAction || "https://formspree.io/f/mzbkoayg"}>
               <input
                 type="hidden"
                 name="_subject"
@@ -348,13 +299,7 @@ export default function App() {
                 <input
                   type="email"
                   name="_replyto"
-                  placeholder={
-                    lang === "zh"
-                      ? "你的 Email"
-                      : lang === "fr"
-                      ? "Votre email"
-                      : "Your email"
-                  }
+                  placeholder={t(lang, "contact_email_placeholder")}
                   required
                 />
               </div>
@@ -363,13 +308,7 @@ export default function App() {
                 <textarea
                   name="message"
                   rows="5"
-                  placeholder={
-                    lang === "zh"
-                      ? "你的訊息"
-                      : lang === "fr"
-                      ? "Votre message"
-                      : "Your message"
-                  }
+                  placeholder={t(lang, "contact_message_placeholder")}
                   required
                 />
               </div>
@@ -378,7 +317,7 @@ export default function App() {
                 type="submit"
                 className="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element"
               >
-                {lang === "zh" ? "送出" : lang === "fr" ? "Envoyer" : "Send"}
+                {t(lang, "contact_send")}
               </button>
             </form>
           </div>
