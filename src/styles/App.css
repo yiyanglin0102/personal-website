@@ -832,3 +832,19 @@ a {
   flex: 0 0 300px; /* fixed width card */
   max-width: 300px;
 }
+
+/* Hide/show navbar on scroll */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  transform: translateY(0);
+  transition: transform 180ms ease, opacity 180ms ease;
+  will-change: transform;
+}
+
+.nav.nav--hidden {
+  transform: translateY(-110%);
+  opacity: 0.98;
+}

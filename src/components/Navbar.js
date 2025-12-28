@@ -3,14 +3,14 @@ import React from "react";
 import { ThemeContext, LangContext } from "../providers";
 import { LANGS, t } from "../i18n";
 
-export default function Navbar({ links }) {
+export default function Navbar({ links, hidden = false }) {
   const { theme, setTheme } = React.useContext(ThemeContext);
   const { lang, setLang } = React.useContext(LangContext);
 
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
-    <header className="nav">
+    <header className={`nav ${hidden ? "nav--hidden" : ""}`}>
       <div className="container nav__inner">
         <a className="nav__brand" href="#top" aria-label="Home">
           YL

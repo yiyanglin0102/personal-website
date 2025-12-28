@@ -44,6 +44,69 @@ function pickLang(value, lang, fallback = "en") {
 export default function App() {
   const { lang } = React.useContext(LangContext);
 
+  const [navHidden, setNavHidden] = React.useState(false);
+
+  React.useEffect(() => {
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const delta = y - lastY;
+          const absDelta = Math.abs(delta);
+
+          // ignore tiny jitter
+          if (absDelta < 6) {
+            ticking = false;
+            return;
+          }
+
+          // always show near the top
+          if (y < 80) {
+            setNavHidden(false);
+          } else {
+            // hide when scrolling down, show when scrolling up
+            setNavHidden(delta > 0);
+          }
+
+          lastY = y;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Convert vertical mouse wheel to horizontal scroll on Projects row (your existing)
+  React.useEffect(() => {
+    const el = document.querySelector(".cardsScroll");
+    if (!el) return;
+
+    const onWheel = (e) => {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      el.scrollLeft += e.deltaY;
+    };
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
+
+  const navLinks = [
+    { label: t(lang, "nav_about"), href: "#about" },
+    { label: t(lang, "nav_projects"), href: "#projects" },
+    { label: t(lang, "nav_experience"), href: "#experience" },
+    { label: t(lang, "nav_education"), href: "#education" },
+    { label: t(lang, "nav_contact"), href: "#contact" },
+  ];
+
   // Convert vertical mouse wheel to horizontal scroll on Projects row
   React.useEffect(() => {
     const el = document.querySelector(".cardsScroll");
@@ -59,14 +122,7 @@ export default function App() {
     return () => el.removeEventListener("wheel", onWheel);
   }, []);
 
-  // NAV
-  const navLinks = [
-    { label: t(lang, "nav_about"), href: "#about" },
-    { label: t(lang, "nav_projects"), href: "#projects" },
-    { label: t(lang, "nav_experience"), href: "#experience" },
-    { label: t(lang, "nav_education"), href: "#education" },
-    { label: t(lang, "nav_contact"), href: "#contact" },
-  ];
+  
 
   // Profile fields
   const profileName = pickLang(profile.name, lang) ?? "";
@@ -85,7 +141,7 @@ export default function App() {
 
   return (
     <div className="app" id="top">
-      <Navbar links={navLinks} />
+      <Navbar links={navLinks} hidden={navHidden} />
 
       {/* HERO */}
       <main className="hero">
