@@ -34,7 +34,7 @@ export function normalizeLang(lang) {
   if (lang === "zh-TW" || lang === "zh-HK") return "zh-TW";
   if (lang === "zh-CN" || lang === "zh-SG") return "zh-CN";
 
-  return lang; // keep all (ja/es/ar/ko/vi/th/de/nl)
+  return lang;
 }
 
 /* =========================================================
@@ -55,18 +55,15 @@ export const dict = {
 
     projects_subtitle: "A few things I’ve built recently.",
 
-    // About section panel title
     highlights_label: "Highlights",
 
-    // Hero card stats
     stat_focus_k: "Focus",
     stat_focus_v: "React • Systems • Performance",
     stat_open_k: "Open to",
     stat_open_v: "Frontend / Full-Stack roles",
     stat_tz_k: "Timezone",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
-    // Contact block (left title + description + placeholders + button)
     contact_title: "Get in touch",
     contact_desc: "Have a project, idea, or question? Feel free to reach out.",
     contact_email_placeholder: "Your email",
@@ -77,7 +74,7 @@ export const dict = {
     theme_dark: "Dark",
   },
 
-  /* ---------- Traditional Chinese (Taiwan) ---------- */
+  /* ---------- Traditional Chinese ---------- */
   "zh-TW": {
     nav_about: "關於",
     nav_projects: "作品",
@@ -98,7 +95,7 @@ export const dict = {
     stat_open_k: "目標",
     stat_open_v: "前端 / 全端職缺",
     stat_tz_k: "時區",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "聯絡我",
     contact_desc: "有合作想法或問題，歡迎隨時留言。",
@@ -110,7 +107,7 @@ export const dict = {
     theme_dark: "深色",
   },
 
-  /* ---------- Simplified Chinese (Mainland) ---------- */
+  /* ---------- Simplified Chinese ---------- */
   "zh-CN": {
     nav_about: "关于",
     nav_projects: "作品",
@@ -131,7 +128,7 @@ export const dict = {
     stat_open_k: "目标",
     stat_open_v: "前端 / 全栈岗位",
     stat_tz_k: "时区",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "联系我",
     contact_desc: "有合作想法或问题，欢迎随时留言。",
@@ -164,7 +161,7 @@ export const dict = {
     stat_open_k: "Ouvert à",
     stat_open_v: "Postes Frontend / Full-stack",
     stat_tz_k: "Fuseau horaire",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "Entrer en contact",
     contact_desc: "Une idée, un projet ou une question ? Écrivez-moi.",
@@ -197,7 +194,7 @@ export const dict = {
     stat_open_k: "希望",
     stat_open_v: "フロントエンド / フルスタック",
     stat_tz_k: "タイムゾーン",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "お問い合わせ",
     contact_desc: "プロジェクトや質問があればお気軽にご連絡ください。",
@@ -230,7 +227,7 @@ export const dict = {
     stat_open_k: "Interesado en",
     stat_open_v: "Roles Frontend / Full-stack",
     stat_tz_k: "Zona horaria",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "Ponte en contacto",
     contact_desc: "¿Tienes un proyecto o una pregunta? Escríbeme.",
@@ -242,7 +239,7 @@ export const dict = {
     theme_dark: "Oscuro",
   },
 
-  /* ---------- Arabic (RTL language) ---------- */
+  /* ---------- Arabic ---------- */
   ar: {
     nav_about: "نبذة",
     nav_projects: "المشاريع",
@@ -263,7 +260,7 @@ export const dict = {
     stat_open_k: "متاح لـ",
     stat_open_v: "أدوار Frontend / Full-Stack",
     stat_tz_k: "المنطقة الزمنية",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "تواصل معي",
     contact_desc: "هل لديك مشروع أو فكرة أو سؤال؟ يسعدني التواصل.",
@@ -296,7 +293,7 @@ export const dict = {
     stat_open_k: "관심 포지션",
     stat_open_v: "프론트엔드 / 풀스택",
     stat_tz_k: "시간대",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "문의하기",
     contact_desc: "프로젝트/아이디어/질문이 있으면 편하게 연락 주세요.",
@@ -329,7 +326,7 @@ export const dict = {
     stat_open_k: "Quan tâm",
     stat_open_v: "Vị trí Frontend / Full-stack",
     stat_tz_k: "Múi giờ",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "Kết nối",
     contact_desc: "Có dự án, ý tưởng hay câu hỏi? Hãy nhắn cho tôi.",
@@ -362,7 +359,7 @@ export const dict = {
     stat_open_k: "สนใจงาน",
     stat_open_v: "Frontend / Full-stack",
     stat_tz_k: "เขตเวลา",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "ติดต่อฉัน",
     contact_desc: "มีโปรเจกต์ ไอเดีย หรือคำถาม? ติดต่อมาได้เลย",
@@ -395,7 +392,7 @@ export const dict = {
     stat_open_k: "Offen für",
     stat_open_v: "Frontend / Full-Stack Rollen",
     stat_tz_k: "Zeitzone",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "Kontakt",
     contact_desc: "Projekt, Idee oder Frage? Schreib mir gern.",
@@ -428,7 +425,7 @@ export const dict = {
     stat_open_k: "Open voor",
     stat_open_v: "Frontend / Full-stack rollen",
     stat_tz_k: "Tijdzone",
-    stat_tz_v: "Asia/Taipei (UTC+8)",
+    stat_tz_v: "Europe/London (UTC+0)",
 
     contact_title: "Neem contact op",
     contact_desc:
