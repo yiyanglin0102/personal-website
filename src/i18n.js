@@ -56,7 +56,7 @@ export const dict = {
     stat_focus_k: "Focus",
     stat_focus_v: "Systems • Interfaces • Performance",
     stat_tz_k: "Timezone",
-    stat_tz_v: "London (UTC+0)",
+    stat_tz_v: "London (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "Have a project, idea, or question? Feel free to reach out.",
@@ -87,7 +87,7 @@ export const dict = {
     stat_focus_k: "重點",
     stat_focus_v: "系統 • 介面 • 效能",
     stat_tz_k: "時區",
-    stat_tz_v: "倫敦（UTC+0）",
+    stat_tz_v: "倫敦（UTC+1）",
 
     contact_title: "Get in Touch",
     contact_desc: "有合作想法或問題，歡迎隨時留言。",
@@ -118,7 +118,7 @@ export const dict = {
     stat_focus_k: "重点",
     stat_focus_v: "系统 • 界面 • 性能",
     stat_tz_k: "时区",
-    stat_tz_v: "伦敦（UTC+0）",
+    stat_tz_v: "伦敦（UTC+1）",
 
     contact_title: "Get in Touch",
     contact_desc: "有合作想法或问题，欢迎随时留言。",
@@ -149,7 +149,7 @@ export const dict = {
     stat_focus_k: "Focus",
     stat_focus_v: "Systèmes • Interfaces • Performance",
     stat_tz_k: "Fuseau horaire",
-    stat_tz_v: "Londres (UTC+0)",
+    stat_tz_v: "Londres (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "Une idée, un projet ou une question ? Écrivez-moi.",
@@ -180,7 +180,7 @@ export const dict = {
     stat_focus_k: "注力",
     stat_focus_v: "システム • インターフェース • パフォーマンス",
     stat_tz_k: "タイムゾーン",
-    stat_tz_v: "ロンドン（UTC+0）",
+    stat_tz_v: "ロンドン（UTC+1）",
 
     contact_title: "Get in Touch",
     contact_desc: "プロジェクトや質問があればお気軽にご連絡ください。",
@@ -211,7 +211,7 @@ export const dict = {
     stat_focus_k: "Enfoque",
     stat_focus_v: "Sistemas • Interfaces • Rendimiento",
     stat_tz_k: "Zona horaria",
-    stat_tz_v: "Londres (UTC+0)",
+    stat_tz_v: "Londres (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "¿Tienes un proyecto o una pregunta? Escríbeme.",
@@ -242,7 +242,7 @@ export const dict = {
     stat_focus_k: "التركيز",
     stat_focus_v: "الأنظمة • الواجهات • الأداء",
     stat_tz_k: "المنطقة الزمنية",
-    stat_tz_v: "لندن (UTC+0)",
+    stat_tz_v: "لندن (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "هل لديك مشروع أو فكرة أو سؤال؟ لا تتردد في التواصل.",
@@ -273,7 +273,7 @@ export const dict = {
     stat_focus_k: "집중 분야",
     stat_focus_v: "시스템 • 인터페이스 • 성능",
     stat_tz_k: "시간대",
-    stat_tz_v: "런던 (UTC+0)",
+    stat_tz_v: "런던 (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "프로젝트나 질문이 있다면 언제든지 연락하세요.",
@@ -304,7 +304,7 @@ export const dict = {
     stat_focus_k: "Trọng tâm",
     stat_focus_v: "Hệ thống • Giao diện • Hiệu năng",
     stat_tz_k: "Múi giờ",
-    stat_tz_v: "Luân Đôn (UTC+0)",
+    stat_tz_v: "Luân Đôn (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "Bạn có dự án hay câu hỏi? Hãy gửi tin nhắn cho tôi.",
@@ -335,7 +335,7 @@ export const dict = {
     stat_focus_k: "โฟกัส",
     stat_focus_v: "ระบบ • อินเทอร์เฟซ • ประสิทธิภาพ",
     stat_tz_k: "เขตเวลา",
-    stat_tz_v: "ลอนดอน (UTC+0)",
+    stat_tz_v: "ลอนดอน (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "มีโปรเจกต์ ไอเดีย หรือคำถาม? ติดต่อผมได้เลย",
@@ -366,7 +366,7 @@ export const dict = {
     stat_focus_k: "Fokus",
     stat_focus_v: "Systeme • Schnittstellen • Performance",
     stat_tz_k: "Zeitzone",
-    stat_tz_v: "London (UTC+0)",
+    stat_tz_v: "London (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "Haben Sie ein Projekt oder eine Frage? Schreiben Sie mir.",
@@ -397,7 +397,7 @@ export const dict = {
     stat_focus_k: "Focus",
     stat_focus_v: "Systemen • Interfaces • Performance",
     stat_tz_k: "Tijdzone",
-    stat_tz_v: "Londen (UTC+0)",
+    stat_tz_v: "Londen (UTC+1)",
 
     contact_title: "Get in Touch",
     contact_desc: "Heb je een project of vraag? Stuur gerust een bericht.",
