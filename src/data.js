@@ -801,7 +801,7 @@ export const projects = [
 export const experience = [
   {
     company: "Wayne Kerr Electronics",
-    period: "Feb. 2026 — Present",
+    period: "February 2026 — Present",
     role: {
       en: "Systems Engineer (Full-time) · Bognor Regis",
       "zh-TW": "系統工程師（全職）· 博格諾里吉斯",
@@ -871,7 +871,7 @@ export const experience = [
 
   {
     company: "Wistron Corporation",
-    period: "Dec. 2025 — Feb. 2026",
+    period: "December 2025 — February 2026",
     role: {
       en: "PCBA Technician (Full-time) · Hsinchu",
       "zh-TW": "PCBA 技術員（全職）· 新竹",
