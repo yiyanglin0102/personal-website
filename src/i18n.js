@@ -1,19 +1,14 @@
-// src/i18n.js
-
 /* =========================================================
  * Language selector options (UI)
  * ========================================================= */
 export const LANGS = [
   { code: "en", label: "EN" },
 
-  // Chinese variants
   { code: "zh-TW", label: "繁中" },
   { code: "zh-CN", label: "简中" },
 
-  // French
   { code: "fr", label: "FR" },
 
-  // More languages
   { code: "ja", label: "日本語" },
   { code: "es", label: "Español" },
   { code: "ar", label: "العربية" },
@@ -30,7 +25,6 @@ export const LANGS = [
 export function normalizeLang(lang) {
   if (!lang) return "en";
 
-  // Chinese variants
   if (lang === "zh-TW" || lang === "zh-HK") return "zh-TW";
   if (lang === "zh-CN" || lang === "zh-SG") return "zh-CN";
 
@@ -38,7 +32,7 @@ export function normalizeLang(lang) {
 }
 
 /* =========================================================
- * UI Dictionary (ALL languages included)
+ * UI Dictionary
  * ========================================================= */
 export const dict = {
   /* ---------- English ---------- */
@@ -49,7 +43,7 @@ export const dict = {
     nav_education: "Education",
     nav_contact: "Contact",
 
-    hero_title: "Engineer",
+    hero_title: "Software Engineer",
     hero_cta_projects: "View Projects",
     hero_cta_contact: "Get in Touch",
 
@@ -58,9 +52,7 @@ export const dict = {
     highlights_label: "Highlights",
 
     stat_focus_k: "Focus",
-    stat_focus_v: "React • Systems • Performance",
-    stat_open_k: "Open to",
-    stat_open_v: "Frontend / Full-Stack roles",
+    stat_focus_v: "Systems • Interfaces • Performance",
     stat_tz_k: "Timezone",
     stat_tz_v: "Europe/London (UTC+0)",
 
@@ -82,22 +74,20 @@ export const dict = {
     nav_education: "學歷",
     nav_contact: "聯絡",
 
-    hero_title: "工程師",
+    hero_title: "軟體工程師",
     hero_cta_projects: "看作品",
-    hero_cta_contact: "聯絡我",
+    hero_cta_contact: "",
 
     projects_subtitle: "最近做的一些專案。",
 
     highlights_label: "重點",
 
     stat_focus_k: "重點",
-    stat_focus_v: "React • 系統 • 效能",
-    stat_open_k: "目標",
-    stat_open_v: "前端 / 全端職缺",
+    stat_focus_v: "系統 • 介面 • 效能",
     stat_tz_k: "時區",
     stat_tz_v: "Europe/London (UTC+0)",
 
-    contact_title: "聯絡我",
+    contact_title: "Get in touch",
     contact_desc: "有合作想法或問題，歡迎隨時留言。",
     contact_email_placeholder: "你的 Email",
     contact_message_placeholder: "你的訊息",
@@ -115,22 +105,20 @@ export const dict = {
     nav_education: "学历",
     nav_contact: "联系",
 
-    hero_title: "工程师",
+    hero_title: "软件工程师",
     hero_cta_projects: "看作品",
-    hero_cta_contact: "联系我",
+    hero_cta_contact: "",
 
-    projects_subtitle: "最近做的一些项目。",
+    projects_subtitle: "最近的一些项目。",
 
     highlights_label: "重点",
 
     stat_focus_k: "重点",
-    stat_focus_v: "React • 系统 • 性能",
-    stat_open_k: "目标",
-    stat_open_v: "前端 / 全栈岗位",
+    stat_focus_v: "系统 • 界面 • 性能",
     stat_tz_k: "时区",
     stat_tz_v: "Europe/London (UTC+0)",
 
-    contact_title: "联系我",
+    contact_title: "Get in touch",
     contact_desc: "有合作想法或问题，欢迎随时留言。",
     contact_email_placeholder: "你的邮箱",
     contact_message_placeholder: "你的留言",
@@ -148,7 +136,7 @@ export const dict = {
     nav_education: "Formation",
     nav_contact: "Contact",
 
-    hero_title: "Ingénieur",
+    hero_title: "Ingénieur logiciel",
     hero_cta_projects: "Voir les projets",
     hero_cta_contact: "Me contacter",
 
@@ -157,13 +145,11 @@ export const dict = {
     highlights_label: "Points forts",
 
     stat_focus_k: "Focus",
-    stat_focus_v: "React • Systèmes • Performance",
-    stat_open_k: "Ouvert à",
-    stat_open_v: "Postes Frontend / Full-stack",
+    stat_focus_v: "Systèmes • Interfaces • Performance",
     stat_tz_k: "Fuseau horaire",
     stat_tz_v: "Europe/London (UTC+0)",
 
-    contact_title: "Entrer en contact",
+    contact_title: "Get in touch",
     contact_desc: "Une idée, un projet ou une question ? Écrivez-moi.",
     contact_email_placeholder: "Votre email",
     contact_message_placeholder: "Votre message",
@@ -181,7 +167,7 @@ export const dict = {
     nav_education: "学歴",
     nav_contact: "連絡先",
 
-    hero_title: "エンジニア",
+    hero_title: "ソフトウェアエンジニア",
     hero_cta_projects: "プロジェクトを見る",
     hero_cta_contact: "連絡する",
 
@@ -190,13 +176,11 @@ export const dict = {
     highlights_label: "ポイント",
 
     stat_focus_k: "注力",
-    stat_focus_v: "React • システム • パフォーマンス",
-    stat_open_k: "希望",
-    stat_open_v: "フロントエンド / フルスタック",
+    stat_focus_v: "システム • インターフェース • パフォーマンス",
     stat_tz_k: "タイムゾーン",
     stat_tz_v: "Europe/London (UTC+0)",
 
-    contact_title: "お問い合わせ",
+    contact_title: "Get in touch",
     contact_desc: "プロジェクトや質問があればお気軽にご連絡ください。",
     contact_email_placeholder: "メールアドレス",
     contact_message_placeholder: "メッセージ",
@@ -214,7 +198,7 @@ export const dict = {
     nav_education: "Educación",
     nav_contact: "Contacto",
 
-    hero_title: "Ingeniero",
+    hero_title: "Ingeniero de software",
     hero_cta_projects: "Ver proyectos",
     hero_cta_contact: "Contactar",
 
@@ -223,13 +207,11 @@ export const dict = {
     highlights_label: "Destacados",
 
     stat_focus_k: "Enfoque",
-    stat_focus_v: "React • Sistemas • Rendimiento",
-    stat_open_k: "Interesado en",
-    stat_open_v: "Roles Frontend / Full-stack",
+    stat_focus_v: "Sistemas • Interfaces • Rendimiento",
     stat_tz_k: "Zona horaria",
     stat_tz_v: "Europe/London (UTC+0)",
 
-    contact_title: "Ponte en contacto",
+    contact_title: "Get in touch",
     contact_desc: "¿Tienes un proyecto o una pregunta? Escríbeme.",
     contact_email_placeholder: "Tu correo",
     contact_message_placeholder: "Tu mensaje",
@@ -237,205 +219,6 @@ export const dict = {
 
     theme_light: "Claro",
     theme_dark: "Oscuro",
-  },
-
-  /* ---------- Arabic ---------- */
-  ar: {
-    nav_about: "نبذة",
-    nav_projects: "المشاريع",
-    nav_experience: "الخبرة",
-    nav_education: "التعليم",
-    nav_contact: "تواصل",
-
-    hero_title: "مهندس",
-    hero_cta_projects: "عرض المشاريع",
-    hero_cta_contact: "تواصل معي",
-
-    projects_subtitle: "بعض الأعمال التي أنجزتها مؤخرًا.",
-
-    highlights_label: "أبرز النقاط",
-
-    stat_focus_k: "التركيز",
-    stat_focus_v: "React • الأنظمة • الأداء",
-    stat_open_k: "متاح لـ",
-    stat_open_v: "أدوار Frontend / Full-Stack",
-    stat_tz_k: "المنطقة الزمنية",
-    stat_tz_v: "Europe/London (UTC+0)",
-
-    contact_title: "تواصل معي",
-    contact_desc: "هل لديك مشروع أو فكرة أو سؤال؟ يسعدني التواصل.",
-    contact_email_placeholder: "بريدك الإلكتروني",
-    contact_message_placeholder: "رسالتك",
-    contact_send: "إرسال",
-
-    theme_light: "فاتح",
-    theme_dark: "داكن",
-  },
-
-  /* ---------- Korean ---------- */
-  ko: {
-    nav_about: "소개",
-    nav_projects: "프로젝트",
-    nav_experience: "경력",
-    nav_education: "학력",
-    nav_contact: "연락처",
-
-    hero_title: "엔지니어",
-    hero_cta_projects: "프로젝트 보기",
-    hero_cta_contact: "연락하기",
-
-    projects_subtitle: "최근에 만든 프로젝트 일부입니다.",
-
-    highlights_label: "핵심",
-
-    stat_focus_k: "포커스",
-    stat_focus_v: "React • 시스템 • 성능",
-    stat_open_k: "관심 포지션",
-    stat_open_v: "프론트엔드 / 풀스택",
-    stat_tz_k: "시간대",
-    stat_tz_v: "Europe/London (UTC+0)",
-
-    contact_title: "문의하기",
-    contact_desc: "프로젝트/아이디어/질문이 있으면 편하게 연락 주세요.",
-    contact_email_placeholder: "이메일",
-    contact_message_placeholder: "메시지",
-    contact_send: "보내기",
-
-    theme_light: "라이트",
-    theme_dark: "다크",
-  },
-
-  /* ---------- Vietnamese ---------- */
-  vi: {
-    nav_about: "Giới thiệu",
-    nav_projects: "Dự án",
-    nav_experience: "Kinh nghiệm",
-    nav_education: "Học vấn",
-    nav_contact: "Liên hệ",
-
-    hero_title: "Kỹ sư",
-    hero_cta_projects: "Xem dự án",
-    hero_cta_contact: "Liên hệ",
-
-    projects_subtitle: "Một vài sản phẩm tôi xây dựng gần đây.",
-
-    highlights_label: "Điểm nổi bật",
-
-    stat_focus_k: "Tập trung",
-    stat_focus_v: "React • Hệ thống • Hiệu năng",
-    stat_open_k: "Quan tâm",
-    stat_open_v: "Vị trí Frontend / Full-stack",
-    stat_tz_k: "Múi giờ",
-    stat_tz_v: "Europe/London (UTC+0)",
-
-    contact_title: "Kết nối",
-    contact_desc: "Có dự án, ý tưởng hay câu hỏi? Hãy nhắn cho tôi.",
-    contact_email_placeholder: "Email của bạn",
-    contact_message_placeholder: "Tin nhắn của bạn",
-    contact_send: "Gửi",
-
-    theme_light: "Sáng",
-    theme_dark: "Tối",
-  },
-
-  /* ---------- Thai ---------- */
-  th: {
-    nav_about: "เกี่ยวกับ",
-    nav_projects: "ผลงาน",
-    nav_experience: "ประสบการณ์",
-    nav_education: "การศึกษา",
-    nav_contact: "ติดต่อ",
-
-    hero_title: "วิศวกร",
-    hero_cta_projects: "ดูผลงาน",
-    hero_cta_contact: "ติดต่อฉัน",
-
-    projects_subtitle: "ตัวอย่างผลงานที่ทำล่าสุดบางส่วน",
-
-    highlights_label: "จุดเด่น",
-
-    stat_focus_k: "โฟกัส",
-    stat_focus_v: "React • ระบบ • ประสิทธิภาพ",
-    stat_open_k: "สนใจงาน",
-    stat_open_v: "Frontend / Full-stack",
-    stat_tz_k: "เขตเวลา",
-    stat_tz_v: "Europe/London (UTC+0)",
-
-    contact_title: "ติดต่อฉัน",
-    contact_desc: "มีโปรเจกต์ ไอเดีย หรือคำถาม? ติดต่อมาได้เลย",
-    contact_email_placeholder: "อีเมลของคุณ",
-    contact_message_placeholder: "ข้อความของคุณ",
-    contact_send: "ส่ง",
-
-    theme_light: "สว่าง",
-    theme_dark: "มืด",
-  },
-
-  /* ---------- German ---------- */
-  de: {
-    nav_about: "Über mich",
-    nav_projects: "Projekte",
-    nav_experience: "Erfahrung",
-    nav_education: "Ausbildung",
-    nav_contact: "Kontakt",
-
-    hero_title: "Ingenieur",
-    hero_cta_projects: "Projekte ansehen",
-    hero_cta_contact: "Kontakt aufnehmen",
-
-    projects_subtitle: "Ein paar Dinge, die ich kürzlich gebaut habe.",
-
-    highlights_label: "Highlights",
-
-    stat_focus_k: "Fokus",
-    stat_focus_v: "React • Systeme • Performance",
-    stat_open_k: "Offen für",
-    stat_open_v: "Frontend / Full-Stack Rollen",
-    stat_tz_k: "Zeitzone",
-    stat_tz_v: "Europe/London (UTC+0)",
-
-    contact_title: "Kontakt",
-    contact_desc: "Projekt, Idee oder Frage? Schreib mir gern.",
-    contact_email_placeholder: "Deine E-Mail",
-    contact_message_placeholder: "Deine Nachricht",
-    contact_send: "Senden",
-
-    theme_light: "Hell",
-    theme_dark: "Dunkel",
-  },
-
-  /* ---------- Dutch ---------- */
-  nl: {
-    nav_about: "Over mij",
-    nav_projects: "Projecten",
-    nav_experience: "Ervaring",
-    nav_education: "Opleiding",
-    nav_contact: "Contact",
-
-    hero_title: "Ingenieur",
-    hero_cta_projects: "Bekijk projecten",
-    hero_cta_contact: "Neem contact op",
-
-    projects_subtitle: "Een paar dingen die ik onlangs heb gebouwd.",
-
-    highlights_label: "Highlights",
-
-    stat_focus_k: "Focus",
-    stat_focus_v: "React • Systemen • Performance",
-    stat_open_k: "Open voor",
-    stat_open_v: "Frontend / Full-stack rollen",
-    stat_tz_k: "Tijdzone",
-    stat_tz_v: "Europe/London (UTC+0)",
-
-    contact_title: "Neem contact op",
-    contact_desc:
-      "Heb je een project, idee of vraag? Stuur gerust een bericht.",
-    contact_email_placeholder: "Je e-mail",
-    contact_message_placeholder: "Je bericht",
-    contact_send: "Versturen",
-
-    theme_light: "Licht",
-    theme_dark: "Donker",
   },
 };
 

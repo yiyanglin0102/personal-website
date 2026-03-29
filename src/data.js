@@ -63,7 +63,7 @@ export const profile = {
   },
   email: "yiyanglin0102@gmail.com",
   socials: [
-    { label: "CV", href: "/files/Yi-Yang_Lin-CV.pdf" }, // if you move to /public, use "/Yi-Yang_Lin-CV.pdf"
+    { label: "CV", href: "/files/Yi-Yang_Lin-CV.pdf" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/yiyang-lin/" },
     { label: "GitHub", href: "https://github.com/yiyanglin0102/" },
     { label: "Email", href: "mailto:yiyanglin0102@gmail.com" },
@@ -94,55 +94,65 @@ export const about = {
     de: "Über mich",
     nl: "Over mij",
   },
-  // Keep the first paragraph short for the top area. Keep the long paragraph as a second item.
   body: {
     en: [
-      "Welcome to my personal web page! My name is Yi-Yang Lin, and I'm a computer science professional with a passion for using engineering to solve complex problems and create innovative solutions...",
-      "With a strong background in Computer Science, I'm deeply passionate about leveraging technology to address intricate challenges and pioneer innovative solutions within the software, hardware, and healthcare industry. Over the years, I've honed my expertise in both software and hardware through diverse projects across academia and industry, including WiFi, Bluetooth, 5G mobile tool validation, course projects, and personal initiatives. I’m seeking opportunities to take on complex problems and collaborate with cutting-edge technologies. If you're curious to learn more about my work or explore potential collaborations, feel free to reach out. Thank you for visiting—excited to connect!",
+      "Welcome to my personal website! My name is Yi-Yang Lin, and I am a computer science professional passionate about solving complex problems through engineering and building practical systems.",
+      "With a strong background in Computer Science, I enjoy using technology to tackle challenging problems and develop innovative solutions across software and hardware systems. Over the years, I have gained experience through diverse projects in both academia and industry, including WiFi, Bluetooth, 5G mobile tool validation, course projects, and personal initiatives. I am interested in opportunities where I can work on complex systems, build reliable tools, and collaborate with teams working on advanced technologies.",
     ],
+
     "zh-TW": [
-      "歡迎來到我的個人網站！我叫林益揚，擁有資工背景，熱愛用工程解決複雜問題並打造創新解決方案……",
-      "我具備扎實的電腦科學背景，致力於運用科技解決具挑戰性的問題，並在軟體、硬體以及醫療相關領域推動創新。多年來我透過學術與業界多元專案累積軟硬整合能力，包含 WiFi、Bluetooth、5G 測試工具驗證、課程專案及個人專案等。我正在尋找新的機會，期待與前沿技術一起解決困難問題、交付成果。若你想更了解我的作品或討論合作，歡迎隨時聯絡。謝謝你的造訪，期待認識你！",
+      "歡迎來到我的個人網站！我是林益揚，一名擁有電腦科學背景的工程師，熱衷於透過工程方法解決複雜問題並打造實用系統。",
+      "我具備扎實的電腦科學背景，喜歡運用技術處理具有挑戰性的問題，並在軟體與硬體系統中開發創新的解決方案。多年來我透過學術與業界的多元專案累積經驗，包括 WiFi、Bluetooth、5G 行動測試工具驗證、課程專案以及個人專案等。我期待能在需要系統思維的環境中工作，打造可靠工具並與團隊共同開發前沿技術。",
     ],
+
     "zh-CN": [
-      "欢迎来到我的个人网站！我叫林益扬，拥有计算机背景，热爱用工程解决复杂问题并打造创新解决方案……",
-      "我具备扎实的计算机科学背景，致力于运用技术解决具有挑战性的问题，并在软件、硬件以及医疗相关领域推动创新。多年来我通过学术与业界多元项目积累软硬整合能力，包括 WiFi、Bluetooth、5G 测试工具验证、课程项目及个人项目等。我正在寻找新的机会，期待与前沿技术一起解决困难问题、交付成果。若你想更了解我的作品或讨论合作，欢迎随时联系。感谢你的来访，期待认识你！",
+      "欢迎来到我的个人网站！我是林益扬，一名拥有计算机科学背景的工程师，热衷于通过工程方法解决复杂问题并构建实用系统。",
+      "我拥有扎实的计算机科学背景，喜欢利用技术解决具有挑战性的难题，并在软件与硬件系统中开发创新解决方案。多年来我通过学术和行业项目积累经验，包括 WiFi、Bluetooth、5G 移动测试工具验证、课程项目以及个人项目。我希望在需要系统思维的环境中工作，开发可靠工具并与团队合作推进先进技术。",
     ],
+
     fr: [
-      "Bienvenue sur mon site ! Je m’appelle Yi-Yang Lin, ingénieur en informatique passionné par la résolution de problèmes complexes et la création de solutions innovantes…",
-      "Avec une solide formation en informatique, je suis motivé par l’idée d’utiliser la technologie pour résoudre des défis ambitieux dans les domaines du logiciel, du matériel et de la santé. J’ai acquis de l’expérience via des projets variés (WiFi, Bluetooth, validation d’outils 5G, projets académiques et personnels). Je recherche des opportunités pour travailler sur des sujets complexes et collaborer avec des technologies de pointe. N’hésitez pas à me contacter pour échanger—merci de votre visite !",
+      "Bienvenue sur mon site personnel ! Je m'appelle Yi-Yang Lin, ingénieur en informatique passionné par la résolution de problèmes complexes et la construction de systèmes fiables.",
+      "Avec une solide formation en informatique, j’aime utiliser la technologie pour relever des défis techniques et développer des solutions innovantes dans les systèmes logiciels et matériels. J’ai acquis de l’expérience à travers divers projets académiques et industriels, notamment autour de WiFi, Bluetooth, validation d’outils mobiles 5G, projets universitaires et projets personnels. Je recherche des opportunités pour travailler sur des systèmes complexes et collaborer avec des équipes utilisant des technologies avancées.",
     ],
+
     ja: [
-      "私のポートフォリオへようこそ！私はYi-Yang Linです。工学の力で複雑な課題を解決し、革新的なソリューションを生み出すことに情熱を持つコンピュータサイエンス出身のエンジニアです…",
-      "コンピュータサイエンスの強固な基盤をもとに、テクノロジーで難易度の高い課題に取り組み、ソフトウェア・ハードウェア・ヘルスケア領域での革新に挑戦しています。WiFi、Bluetooth、5G計測/検証ツール、学術プロジェクトや個人プロジェクトなどを通じて、ソフトとハードの両面で経験を積んできました。複雑な問題に挑み、最先端技術と共に価値を届けられる機会を探しています。ぜひ気軽にご連絡ください。ご訪問ありがとうございます！",
+      "私の個人サイトへようこそ。Yi-Yang Lin と申します。私はコンピュータサイエンスの背景を持ち、工学的アプローチで複雑な問題を解決し、実用的なシステムを構築することに情熱を持つエンジニアです。",
+      "コンピュータサイエンスの基盤を活かし、技術を用いて難しい課題に取り組み、ソフトウェアとハードウェアの両方において革新的なソリューションを開発することを楽しんでいます。これまで WiFi、Bluetooth、5G モバイルツール検証、授業プロジェクト、個人プロジェクトなどを通じて経験を積んできました。複雑なシステムを扱い、先端技術を扱うチームと協力できる機会に興味があります。",
     ],
+
     es: [
-      "¡Bienvenido/a a mi sitio personal! Me llamo Yi-Yang Lin y soy un profesional de informática con pasión por usar la ingeniería para resolver problemas complejos y crear soluciones innovadoras...",
-      "Con una sólida formación en informática, me motiva aprovechar la tecnología para abordar desafíos exigentes y desarrollar soluciones en software, hardware y el sector salud. A lo largo de los años, he fortalecido mis habilidades en software y hardware mediante proyectos diversos en academia e industria, incluyendo validación de herramientas para WiFi, Bluetooth y 5G, proyectos de cursos e iniciativas personales. Busco oportunidades para enfrentar problemas complejos y colaborar con tecnologías de vanguardia. Si quieres saber más o explorar colaboraciones, no dudes en contactarme. ¡Gracias por tu visita!",
+      "¡Bienvenido a mi sitio personal! Me llamo Yi-Yang Lin y soy un profesional de informática apasionado por resolver problemas complejos y construir sistemas prácticos mediante ingeniería.",
+      "Con una sólida formación en informática, disfruto utilizando la tecnología para abordar desafíos técnicos y desarrollar soluciones innovadoras en sistemas de software y hardware. A lo largo de los años he adquirido experiencia mediante proyectos académicos e industriales, incluyendo validación de herramientas móviles para WiFi, Bluetooth y 5G, así como proyectos personales y de cursos. Me interesan oportunidades donde pueda trabajar en sistemas complejos y colaborar con equipos que desarrollan tecnologías avanzadas.",
     ],
+
     ar: [
-      "مرحبًا بك في موقعي الشخصي! اسمي Yi-Yang Lin، وأنا مختص في علوم الحاسوب ولدي شغف باستخدام الهندسة لحل المشكلات المعقدة وابتكار حلول جديدة...",
-      "بفضل خلفية قوية في علوم الحاسوب، أتحمس لتسخير التكنولوجيا لمعالجة تحديات دقيقة وتقديم حلول مبتكرة في مجالات البرمجيات والأجهزة وقطاع الرعاية الصحية. على مر السنين، طورت خبرتي في البرمجيات والأجهزة عبر مشاريع متنوعة في الدراسة والعمل، بما في ذلك WiFi وBluetooth والتحقق من أدوات 5G، ومشاريع المقررات والمبادرات الشخصية. أبحث عن فرص للعمل على مشكلات معقدة والتعاون مع تقنيات متقدمة. إذا رغبت بمعرفة المزيد أو مناقشة تعاون محتمل، يسعدني تواصلك. شكرًا لزيارتك!",
+      "مرحبًا بك في موقعي الشخصي! اسمي Yi-Yang Lin وأنا مختص في علوم الحاسوب ولدي شغف بحل المشكلات المعقدة وبناء أنظمة عملية باستخدام الهندسة.",
+      "بفضل خلفية قوية في علوم الحاسوب، أستمتع باستخدام التكنولوجيا لمواجهة التحديات التقنية وتطوير حلول مبتكرة في أنظمة البرمجيات والأجهزة. اكتسبت خبرة من خلال مشاريع أكاديمية وصناعية متنوعة، بما في ذلك أدوات التحقق من WiFi وBluetooth و5G، بالإضافة إلى مشاريع دراسية وشخصية. أبحث عن فرص للعمل على أنظمة معقدة والتعاون مع فرق تعمل على تقنيات متقدمة.",
     ],
+
     ko: [
-      "제 개인 웹페이지에 오신 것을 환영합니다! 저는 Yi-Yang Lin이며, 공학을 통해 복잡한 문제를 해결하고 혁신적인 솔루션을 만드는 데 열정을 가진 컴퓨터과학 분야 엔지니어입니다...",
-      "탄탄한 컴퓨터과학 기반을 바탕으로, 기술을 활용해 까다로운 문제를 해결하고 소프트웨어·하드웨어·헬스케어 분야에서 혁신을 만들어가는 데 관심이 많습니다. WiFi, Bluetooth, 5G 도구 검증, 수업 프로젝트, 개인 프로젝트 등 다양한 경험을 통해 소프트웨어와 하드웨어 역량을 모두 키워왔습니다. 복잡한 문제에 도전하고 최첨단 기술과 협업할 기회를 찾고 있습니다. 더 알아보고 싶거나 협업을 논의하고 싶다면 언제든지 연락 주세요. 방문해 주셔서 감사합니다!",
+      "제 개인 웹사이트에 오신 것을 환영합니다. 저는 Yi-Yang Lin이며, 공학적 접근으로 복잡한 문제를 해결하고 실용적인 시스템을 만드는 데 열정을 가진 컴퓨터과학 기반의 엔지니어입니다.",
+      "탄탄한 컴퓨터과학 배경을 바탕으로 기술을 활용해 어려운 문제를 해결하고 소프트웨어와 하드웨어 시스템에서 혁신적인 솔루션을 개발하는 것을 좋아합니다. WiFi, Bluetooth, 5G 모바일 테스트 도구 검증, 수업 프로젝트 및 개인 프로젝트 등을 통해 다양한 경험을 쌓았습니다. 복잡한 시스템을 다루고 첨단 기술을 개발하는 팀과 협력할 기회를 찾고 있습니다.",
     ],
+
     vi: [
-      "Chào mừng bạn đến với trang web cá nhân của tôi! Tôi là Yi-Yang Lin, một chuyên gia khoa học máy tính đam mê sử dụng kỹ thuật để giải quyết các vấn đề phức tạp và tạo ra các giải pháp đổi mới...",
-      "Với nền tảng vững chắc về khoa học máy tính, tôi luôn muốn tận dụng công nghệ để giải quyết những thách thức khó và xây dựng các giải pháp trong lĩnh vực phần mềm, phần cứng và y tế. Trong nhiều năm, tôi đã trau dồi kỹ năng cả phần mềm lẫn phần cứng thông qua các dự án đa dạng ở học thuật và công nghiệp, bao gồm WiFi, Bluetooth, xác thực công cụ 5G, dự án môn học và dự án cá nhân. Tôi đang tìm kiếm cơ hội để xử lý các vấn đề phức tạp và hợp tác với công nghệ tiên tiến. Nếu bạn muốn tìm hiểu thêm hoặc trao đổi hợp tác, hãy liên hệ. Cảm ơn bạn đã ghé thăm!",
+      "Chào mừng bạn đến với trang web cá nhân của tôi! Tôi là Yi-Yang Lin, một kỹ sư khoa học máy tính đam mê giải quyết các vấn đề phức tạp và xây dựng các hệ thống thực tế bằng kỹ thuật.",
+      "Với nền tảng vững chắc về khoa học máy tính, tôi thích sử dụng công nghệ để giải quyết các thách thức kỹ thuật và phát triển các giải pháp sáng tạo trong hệ thống phần mềm và phần cứng. Tôi đã tích lũy kinh nghiệm qua nhiều dự án học thuật và công nghiệp, bao gồm xác thực công cụ WiFi, Bluetooth và 5G, cũng như các dự án cá nhân và dự án môn học. Tôi quan tâm đến những cơ hội làm việc với các hệ thống phức tạp và hợp tác với các nhóm phát triển công nghệ tiên tiến.",
     ],
+
     th: [
-      "ยินดีต้อนรับสู่เว็บไซต์ส่วนตัวของผม! ผมชื่อ Yi-Yang Lin เป็นผู้เชี่ยวชาญด้านวิทยาการคอมพิวเตอร์ที่หลงใหลในการใช้วิศวกรรมเพื่อแก้ปัญหาซับซ้อนและสร้างสรรค์โซลูชันใหม่ๆ...",
-      "ด้วยพื้นฐานด้านวิทยาการคอมพิวเตอร์ที่แข็งแรง ผมสนใจนำเทคโนโลยีไปแก้โจทย์ที่ท้าทายและพัฒนาโซลูชันในด้านซอฟต์แวร์ ฮาร์ดแวร์ และเฮลท์แคร์ ตลอดหลายปีที่ผ่านมา ผมได้พัฒนาความเชี่ยวชาญทั้งซอฟต์แวร์และฮาร์ดแวร์ผ่านโปรเจกต์หลากหลายในมหาวิทยาลัยและอุตสาหกรรม เช่น WiFi, Bluetooth, การตรวจสอบเครื่องมือทดสอบ 5G, โปรเจกต์รายวิชา และโปรเจกต์ส่วนตัว ผมกำลังมองหาโอกาสในการทำงานกับปัญหาซับซ้อนและร่วมงานกับเทคโนโลยีล้ำสมัย หากอยากรู้เพิ่มเติมหรือคุยเรื่องความร่วมมือ ติดต่อมาได้เลย ขอบคุณที่แวะมา!",
+      "ยินดีต้อนรับสู่เว็บไซต์ส่วนตัวของผม ผมชื่อ Yi-Yang Lin เป็นวิศวกรด้านวิทยาการคอมพิวเตอร์ที่หลงใหลในการแก้ปัญหาที่ซับซ้อนและสร้างระบบที่ใช้งานได้จริงด้วยวิศวกรรม",
+      "ด้วยพื้นฐานด้านวิทยาการคอมพิวเตอร์ที่แข็งแรง ผมชอบใช้เทคโนโลยีในการแก้ปัญหาทางเทคนิคที่ท้าทาย และพัฒนาโซลูชันใหม่ ๆ ในระบบซอฟต์แวร์และฮาร์ดแวร์ ผมมีประสบการณ์จากโปรเจกต์หลากหลายในทั้งด้านวิชาการและอุตสาหกรรม เช่น WiFi, Bluetooth, การตรวจสอบเครื่องมือทดสอบ 5G รวมถึงโปรเจกต์รายวิชาและโปรเจกต์ส่วนตัว ผมสนใจโอกาสในการทำงานกับระบบที่ซับซ้อนและร่วมงานกับทีมที่พัฒนาเทคโนโลยีขั้นสูง",
     ],
+
     de: [
-      "Willkommen auf meiner persönlichen Webseite! Mein Name ist Yi-Yang Lin. Ich bin Informatiker und brenne dafür, mit Engineering komplexe Probleme zu lösen und innovative Lösungen zu entwickeln...",
-      "Mit einer starken Basis in Informatik bin ich motiviert, Technologie einzusetzen, um anspruchsvolle Herausforderungen zu meistern und Innovationen in den Bereichen Software, Hardware und Healthcare voranzutreiben. Über die Jahre habe ich meine Fähigkeiten in Software und Hardware durch vielfältige Projekte in Hochschule und Industrie ausgebaut – darunter WiFi, Bluetooth, 5G-Tool-Validierung, Kursprojekte und persönliche Initiativen. Ich suche Möglichkeiten, an komplexen Themen zu arbeiten und mit modernen Technologien zusammenzuarbeiten. Wenn du mehr erfahren oder eine Zusammenarbeit besprechen möchtest, melde dich gern. Danke für deinen Besuch!",
+      "Willkommen auf meiner persönlichen Webseite! Ich bin Yi-Yang Lin, Informatiker mit Leidenschaft dafür, komplexe Probleme zu lösen und zuverlässige Systeme zu entwickeln.",
+      "Mit einer starken Grundlage in Informatik arbeite ich gerne mit Technologie, um anspruchsvolle technische Herausforderungen zu lösen und innovative Lösungen in Software- und Hardwaresystemen zu entwickeln. Ich habe Erfahrung aus verschiedenen akademischen und industriellen Projekten gesammelt, darunter WiFi-, Bluetooth- und 5G-Toolvalidierung sowie Kurs- und persönliche Projekte. Ich suche Möglichkeiten, an komplexen Systemen zu arbeiten und mit Teams zusammenzuarbeiten, die an modernen Technologien arbeiten.",
     ],
+
     nl: [
-      "Welkom op mijn persoonlijke website! Mijn naam is Yi-Yang Lin en ik ben een computer science-professional met een passie om met engineering complexe problemen op te lossen en innovatieve oplossingen te bouwen...",
-      "Met een sterke basis in computer science ben ik gedreven om technologie in te zetten voor uitdagende vraagstukken en innovatie in software, hardware en de zorgsector. Door de jaren heen heb ik mijn vaardigheden in zowel software als hardware ontwikkeld via uiteenlopende projecten in de academische wereld en de industrie, waaronder WiFi, Bluetooth, 5G-toolvalidatie, vakprojecten en persoonlijke initiatieven. Ik zoek kansen om aan complexe problemen te werken en samen te werken met cutting-edge technologieën. Wil je meer weten of samenwerken? Neem gerust contact op. Bedankt voor je bezoek!",
+      "Welkom op mijn persoonlijke website! Mijn naam is Yi-Yang Lin en ik ben een computer science-ingenieur met een passie voor het oplossen van complexe problemen en het bouwen van praktische systemen.",
+      "Met een sterke achtergrond in computer science gebruik ik graag technologie om technische uitdagingen aan te pakken en innovatieve oplossingen te ontwikkelen in software- en hardwaresystemen. Door de jaren heen heb ik ervaring opgedaan via diverse academische en industriële projecten, waaronder WiFi, Bluetooth, validatie van 5G-tools, studieprojecten en persoonlijke projecten. Ik ben geïnteresseerd in kansen om aan complexe systemen te werken en samen te werken met teams die aan geavanceerde technologieën bouwen.",
     ],
   },
   highlights: {
@@ -233,8 +243,10 @@ export const projects = [
     },
     description: {
       en: "Explored CNN-based iris recognition, building on foundational work by John Daugman and Libor Masek. Integrated preprocessing and ResNet models to improve accuracy.",
-      "zh-TW": "研究以 CNN 強化虹膜辨識，結合前處理與 ResNet 模型以提升辨識準確度。",
-      "zh-CN": "研究用 CNN 强化虹膜识别，结合预处理与 ResNet 模型以提升准确度。",
+      "zh-TW":
+        "研究以 CNN 強化虹膜辨識，結合前處理與 ResNet 模型以提升辨識準確度。",
+      "zh-CN":
+        "研究用 CNN 强化虹膜识别，结合预处理与 ResNet 模型以提升准确度。",
       fr: "Étude de la reconnaissance d’iris via CNN, avec prétraitement et modèles ResNet pour améliorer la précision.",
       ja: "CNNベースの虹彩認識を検討し、前処理とResNetモデルを統合して精度を向上。",
       es: "Exploré reconocimiento de iris con CNN, integrando preprocesamiento y modelos ResNet para mejorar la precisión.",
@@ -271,7 +283,8 @@ export const projects = [
     },
     description: {
       en: "A healthcare web app for physicians, staff, and patients. Supports reservation/calendar events, patient management, and messaging.",
-      "zh-TW": "提供醫師/院方/病患使用的醫療系統：行事曆預約、病患管理與訊息功能。",
+      "zh-TW":
+        "提供醫師/院方/病患使用的醫療系統：行事曆預約、病患管理與訊息功能。",
       "zh-CN": "面向医生/院方/患者的医疗系统：日历预约、患者管理与消息功能。",
       fr: "Application de santé : calendrier/réservations, gestion patient, messagerie.",
       ja: "医師・スタッフ・患者向けの医療Webアプリ。予約/カレンダー、患者管理、メッセージ機能を提供。",
@@ -310,8 +323,10 @@ export const projects = [
     },
     description: {
       en: "Real-time web chat app integrating OpenAI (GPT-4) via API, deployed with AWS Amplify, Lambda, and API Gateway.",
-      "zh-TW": "整合 OpenAI API 的即時聊天應用，並使用 AWS Amplify/Lambda/API Gateway 部署。",
-      "zh-CN": "整合 OpenAI API 的实时聊天应用，并使用 AWS Amplify/Lambda/API Gateway 部署。",
+      "zh-TW":
+        "整合 OpenAI API 的即時聊天應用，並使用 AWS Amplify/Lambda/API Gateway 部署。",
+      "zh-CN":
+        "整合 OpenAI API 的实时聊天应用，并使用 AWS Amplify/Lambda/API Gateway 部署。",
       fr: "Chat temps réel intégrant l’API OpenAI, déployé sur AWS (Amplify/Lambda/API Gateway).",
       ja: "OpenAI（GPT-4）APIを統合したリアルタイムWebチャット。AWS Amplify/Lambda/API Gatewayでデプロイ。",
       es: "Chat web en tiempo real integrando OpenAI (GPT-4) vía API, desplegado con AWS Amplify, Lambda y API Gateway.",
@@ -350,8 +365,10 @@ export const projects = [
     },
     description: {
       en: "Android health app to log meals, nutrition, and ratings to support diet + workout routines.",
-      "zh-TW": "Android 健康紀錄 App：記錄餐點、營養與評分，協助飲食與運動管理。",
-      "zh-CN": "Android 健康记录 App：记录餐点、营养与评分，辅助饮食与运动管理。",
+      "zh-TW":
+        "Android 健康紀錄 App：記錄餐點、營養與評分，協助飲食與運動管理。",
+      "zh-CN":
+        "Android 健康记录 App：记录餐点、营养与评分，辅助饮食与运动管理。",
       fr: "App Android santé : suivi repas/nutrition et habitudes sportives.",
       ja: "食事・栄養・評価を記録し、食事管理と運動習慣を支援するAndroid健康アプリ。",
       es: "App de salud Android para registrar comidas, nutrición y valoraciones, apoyando dieta y entrenamiento.",
@@ -389,8 +406,10 @@ export const projects = [
     },
     description: {
       en: "Web crawler to download videos from platforms like YouTube, Instagram, and TikTok based on keywords and links.",
-      "zh-TW": "依照關鍵字與連結，爬取並下載 YouTube/Instagram/TikTok 等平台影片。",
-      "zh-CN": "根据关键词与链接，爬取并下载 YouTube/Instagram/TikTok 等平台视频。",
+      "zh-TW":
+        "依照關鍵字與連結，爬取並下載 YouTube/Instagram/TikTok 等平台影片。",
+      "zh-CN":
+        "根据关键词与链接，爬取并下载 YouTube/Instagram/TikTok 等平台视频。",
       fr: "Crawler pour télécharger des vidéos (YouTube/Instagram/TikTok) via mots-clés et liens.",
       ja: "キーワードやリンクに基づき、YouTube/Instagram/TikTokなどから動画をダウンロードするクローラー。",
       es: "Crawler web para descargar videos de YouTube, Instagram y TikTok según palabras clave y enlaces.",
@@ -428,8 +447,10 @@ export const projects = [
     },
     description: {
       en: "Built a conversational shopping assistant in Dialogflow with intents/entities for navigation and purchase flows.",
-      "zh-TW": "使用 Dialogflow 建置購物對話助理，設計 intents/entities 支援導購與購買流程。",
-      "zh-CN": "使用 Dialogflow 构建购物对话助手，设计 intents/entities 支持导购与购买流程。",
+      "zh-TW":
+        "使用 Dialogflow 建置購物對話助理，設計 intents/entities 支援導購與購買流程。",
+      "zh-CN":
+        "使用 Dialogflow 构建购物对话助手，设计 intents/entities 支持导购与购买流程。",
       fr: "Assistant conversationnel Dialogflow : intents/entities pour navigation et achats.",
       ja: "Dialogflowで会話型ショッピングアシスタントを構築。ナビゲーションや購入フロー向けにintents/entitiesを設計。",
       es: "Asistente conversacional en Dialogflow con intents/entities para navegación y flujos de compra.",
@@ -467,8 +488,10 @@ export const projects = [
     },
     description: {
       en: "React Native fitness tracking app (Expo) with RESTful APIs and essential screens for a fitness workflow.",
-      "zh-TW": "以 React Native（Expo）打造健身追蹤 App，串接 RESTful API 與核心頁面流程。",
-      "zh-CN": "用 React Native（Expo）打造健身追踪 App，接入 RESTful API 与核心页面流程。",
+      "zh-TW":
+        "以 React Native（Expo）打造健身追蹤 App，串接 RESTful API 與核心頁面流程。",
+      "zh-CN":
+        "用 React Native（Expo）打造健身追踪 App，接入 RESTful API 与核心页面流程。",
       fr: "App React Native (Expo) : suivi fitness avec APIs REST.",
       ja: "React Native（Expo）で作成したフィットネストラッキングアプリ。REST APIと主要画面を実装。",
       es: "App de seguimiento fitness en React Native (Expo) con APIs REST y pantallas esenciales.",
@@ -708,8 +731,10 @@ export const projects = [
     },
     description: {
       en: "Built page-level buffer management over an I/O layer to support B+ tree index nodes and a disk image of the index file.",
-      "zh-TW": "在 I/O layer 之上實作頁面層的 buffer 管理，支援 B+ tree 索引節點並建立磁碟索引映像。",
-      "zh-CN": "在 I/O layer 之上实现页面级 buffer 管理，支持 B+ tree 索引节点并建立磁盘索引镜像。",
+      "zh-TW":
+        "在 I/O layer 之上實作頁面層的 buffer 管理，支援 B+ tree 索引節點並建立磁碟索引映像。",
+      "zh-CN":
+        "在 I/O layer 之上实现页面级 buffer 管理，支持 B+ tree 索引节点并建立磁盘索引镜像。",
       fr: "Gestion de buffer au-dessus de la couche I/O pour un index B+ tree et son image disque.",
       ja: "I/Oレイヤの上にページ単位のバッファ管理を実装し、B+木インデックスノードとインデックスファイルのディスクイメージを支援。",
       es: "Implementé gestión de buffer a nivel de páginas sobre una capa I/O para soportar nodos de índice B+ tree y una imagen en disco del archivo índice.",
@@ -774,6 +799,146 @@ export const projects = [
 /* ================= EXPERIENCE ================= */
 
 export const experience = [
+  {
+    company: "Wayne Kerr Electronics",
+    period: "Feb. 2026 — Present",
+    role: {
+      en: "Systems Engineer (Full-time) · Bognor Regis",
+      "zh-TW": "系統工程師（全職）· 博格諾里吉斯",
+      "zh-CN": "系统工程师（全职）· 博格诺里吉斯",
+      fr: "Ingénieur systèmes (temps plein) · Bognor Regis",
+      ja: "システムエンジニア（フルタイム）· ボグナーリージス",
+      es: "Ingeniero de sistemas (tiempo completo) · Bognor Regis",
+      ar: "مهندس نظم (دوام كامل) · بوغنور ريجيس",
+      ko: "시스템 엔지니어(정규직) · 보그너 리지스",
+      vi: "Kỹ sư hệ thống (toàn thời gian) · Bognor Regis",
+      th: "วิศวกรระบบ (เต็มเวลา) · บ็อกเนอร์รีจิส",
+      de: "Systemingenieur (Vollzeit) · Bognor Regis",
+      nl: "Systeemingenieur (fulltime) · Bognor Regis",
+    },
+    bullets: {
+      en: [
+        "Migrated legacy Microsoft Exchange email infrastructure to Google Workspace, improving availability and reducing infrastructure overhead.",
+        "Participated in design and development of electronic instrumentation for precision measurement and testing applications.",
+      ],
+      "zh-TW": [
+        "將舊版 Microsoft Exchange 郵件系統遷移至 Google Workspace，提升可用性並降低基礎架構維護成本。",
+        "參與精密量測與測試設備之電子儀器設計與開發。",
+      ],
+      "zh-CN": [
+        "将旧版 Microsoft Exchange 邮件系统迁移至 Google Workspace，提高系统可用性并降低基础设施维护成本。",
+        "参与精密测量与测试设备电子仪器的设计与开发。",
+      ],
+      fr: [
+        "Migration d’un système email Microsoft Exchange vers Google Workspace, améliorant la disponibilité et réduisant la charge d’infrastructure.",
+        "Participation à la conception et au développement d’instruments électroniques pour des applications de mesure et de test.",
+      ],
+      ja: [
+        "旧来の Microsoft Exchange メールシステムを Google Workspace へ移行し、可用性を向上させインフラ運用コストを削減。",
+        "精密測定および試験用途向け電子計測機器の設計・開発に参加。",
+      ],
+      es: [
+        "Migré un sistema de correo Microsoft Exchange heredado a Google Workspace, mejorando la disponibilidad y reduciendo la carga de infraestructura.",
+        "Participé en el diseño y desarrollo de instrumentación electrónica para aplicaciones de medición y prueba.",
+      ],
+      ar: [
+        "قمت بترحيل نظام البريد الإلكتروني Microsoft Exchange القديم إلى Google Workspace مما حسّن التوفر وخفّض عبء البنية التحتية.",
+        "المشاركة في تصميم وتطوير أجهزة القياس والاختبار الإلكترونية.",
+      ],
+      ko: [
+        "기존 Microsoft Exchange 이메일 시스템을 Google Workspace로 마이그레이션하여 가용성을 높이고 인프라 운영 부담을 줄였습니다.",
+        "정밀 측정 및 테스트 애플리케이션을 위한 전자 계측 장비 설계 및 개발에 참여했습니다.",
+      ],
+      vi: [
+        "Di chuyển hệ thống email Microsoft Exchange cũ sang Google Workspace, cải thiện độ sẵn sàng và giảm chi phí hạ tầng.",
+        "Tham gia thiết kế và phát triển thiết bị đo lường điện tử cho các ứng dụng kiểm thử.",
+      ],
+      th: [
+        "ย้ายระบบอีเมล Microsoft Exchange แบบเดิมไปยัง Google Workspace เพิ่มความพร้อมใช้งานและลดภาระโครงสร้างพื้นฐาน",
+        "มีส่วนร่วมในการออกแบบและพัฒนาเครื่องมือวัดอิเล็กทรอนิกส์สำหรับงานทดสอบและการวัดค่า",
+      ],
+      de: [
+        "Migration eines Legacy-Microsoft-Exchange-E-Mail-Systems zu Google Workspace zur Verbesserung der Verfügbarkeit und Reduzierung des Infrastrukturaufwands.",
+        "Beteiligung an Design und Entwicklung elektronischer Mess- und Testinstrumente.",
+      ],
+      nl: [
+        "Migratie van een legacy Microsoft Exchange e-mailsysteem naar Google Workspace, waardoor beschikbaarheid verbeterde en infrastructuurlast werd verminderd.",
+        "Deelname aan ontwerp en ontwikkeling van elektronische meet- en testinstrumentatie.",
+      ],
+    },
+    links: [],
+  },
+
+  {
+    company: "Wistron Corporation",
+    period: "Dec. 2025 — Feb. 2026",
+    role: {
+      en: "PCBA Technician (Full-time) · Hsinchu",
+      "zh-TW": "PCBA 技術員（全職）· 新竹",
+      "zh-CN": "PCBA 技术员（全职）· 新竹",
+      fr: "Technicien PCBA (temps plein) · Hsinchu",
+      ja: "PCBA技術者（フルタイム）· 新竹",
+      es: "Técnico PCBA (tiempo completo) · Hsinchu",
+      ar: "فني PCBA (دوام كامل) · شينتشو",
+      ko: "PCBA 기술자(정규직) · 신주",
+      vi: "Kỹ thuật viên PCBA (toàn thời gian) · Hsinchu",
+      th: "ช่างเทคนิค PCBA (เต็มเวลา) · ซินจู๋",
+      de: "PCBA-Techniker (Vollzeit) · Hsinchu",
+      nl: "PCBA-technicus (fulltime) · Hsinchu",
+    },
+    bullets: {
+      en: [
+        "Maintained SMT and DIP production lines for AI datacenter GPUs (NVIDIA Blackwell B200, B300, Vulkan), ensuring manufacturing capacity, on-time delivery, yield optimization, and output targets.",
+        "Executed IPQC and process control, driving root cause analysis, CAPA implementation, and customer audit compliance.",
+      ],
+      "zh-TW": [
+        "維護 AI 資料中心 GPU（NVIDIA Blackwell B200、B300、Vulkan）之 SMT 與 DIP 產線，確保產能、準時交付與良率最佳化。",
+        "執行製程品質檢驗（IPQC）與製程控制，推動問題根因分析與 CAPA 改善措施。",
+      ],
+      "zh-CN": [
+        "维护 AI 数据中心 GPU（NVIDIA Blackwell B200、B300、Vulkan）的 SMT 与 DIP 生产线，确保产能、准时交付及良率优化。",
+        "执行制程质量检验（IPQC）与流程控制，推动根因分析及 CAPA 改进措施。",
+      ],
+      fr: [
+        "Maintenance des lignes SMT et DIP pour GPU de datacenters IA (NVIDIA Blackwell B200/B300/Vulkan), assurant capacité, livraison à temps et optimisation du rendement.",
+        "Exécution d’IPQC et de contrôles de processus, avec analyse des causes racines et mise en œuvre de CAPA.",
+      ],
+      ja: [
+        "AIデータセンター向けGPU（NVIDIA Blackwell B200/B300/Vulkan）のSMTおよびDIP生産ラインを保守し、容量・納期・歩留まり最適化を確保。",
+        "IPQCおよびプロセス管理を実施し、原因分析とCAPA改善を推進。",
+      ],
+      es: [
+        "Mantuve líneas SMT y DIP para GPUs de centros de datos de IA (NVIDIA Blackwell B200/B300/Vulkan), garantizando capacidad, entrega a tiempo y optimización de rendimiento.",
+        "Ejecuté IPQC y control de procesos, impulsando análisis de causa raíz e implementación de CAPA.",
+      ],
+      ar: [
+        "صيانة خطوط SMT وDIP لوحدات GPU الخاصة بمراكز بيانات الذكاء الاصطناعي (NVIDIA Blackwell B200/B300/Vulkan) لضمان السعة والإنتاج في الوقت المحدد وتحسين العائد.",
+        "تنفيذ فحوصات IPQC والتحكم في العمليات مع تحليل الأسباب الجذرية وتطبيق إجراءات CAPA.",
+      ],
+      ko: [
+        "AI 데이터센터 GPU(NVIDIA Blackwell B200/B300/Vulkan)를 위한 SMT 및 DIP 생산 라인을 유지 관리하여 생산 용량, 납기 준수 및 수율 최적화를 보장했습니다.",
+        "IPQC 및 공정 관리를 수행하고 원인 분석과 CAPA 개선 조치를 추진했습니다.",
+      ],
+      vi: [
+        "Bảo trì dây chuyền SMT và DIP cho GPU trung tâm dữ liệu AI (NVIDIA Blackwell B200/B300/Vulkan), đảm bảo công suất, giao hàng đúng hạn và tối ưu hóa yield.",
+        "Thực hiện IPQC và kiểm soát quy trình, thúc đẩy phân tích nguyên nhân gốc và triển khai CAPA.",
+      ],
+      th: [
+        "ดูแลสายการผลิต SMT และ DIP สำหรับ GPU ศูนย์ข้อมูล AI (NVIDIA Blackwell B200/B300/Vulkan) เพื่อให้มั่นใจด้านกำลังการผลิต การส่งมอบตรงเวลา และการเพิ่มประสิทธิภาพ yield",
+        "ดำเนินการ IPQC และควบคุมกระบวนการ พร้อมวิเคราะห์สาเหตุหลักและดำเนินมาตรการ CAPA",
+      ],
+      de: [
+        "Wartung von SMT- und DIP-Produktionslinien für AI-Datacenter-GPUs (NVIDIA Blackwell B200/B300/Vulkan) zur Sicherstellung von Kapazität, termingerechter Lieferung und Yield-Optimierung.",
+        "Durchführung von IPQC und Prozesskontrolle mit Root-Cause-Analyse und CAPA-Implementierung.",
+      ],
+      nl: [
+        "Onderhoud van SMT- en DIP-productielijnen voor AI-datacenter GPU’s (NVIDIA Blackwell B200/B300/Vulkan) met focus op capaciteit, tijdige levering en yield-optimalisatie.",
+        "Uitvoering van IPQC en procescontrole inclusief root cause analyse en CAPA-implementatie.",
+      ],
+    },
+    links: [],
+  },
+
   {
     company: "Delaware North",
     period: "June 2025 — June 2025",
@@ -925,18 +1090,18 @@ export const experience = [
     company: "Google LLC",
     period: "June 2023 — August 2023",
     role: {
-      en: "Engineering Intern (Full-time)",
-      "zh-TW": "工程實習生（全職）",
-      "zh-CN": "工程实习生（全职）",
-      fr: "Stagiaire ingénieur (temps plein)",
-      ja: "エンジニアリング・インターン（フルタイム）",
-      es: "Practicante de ingeniería (tiempo completo)",
-      ar: "متدرب هندسي (دوام كامل)",
-      ko: "엔지니어 인턴(정규직)",
-      vi: "Thực tập sinh kỹ sư (toàn thời gian)",
-      th: "นักศึกษาฝึกงานวิศวกรรม (เต็มเวลา)",
-      de: "Engineering-Praktikant (Vollzeit)",
-      nl: "Engineering stagiair (fulltime)",
+      en: "Hardware Engineering Intern (Full-time) · Taipei",
+      "zh-TW": "硬體工程實習生（全職）· 台北",
+      "zh-CN": "硬件工程实习生（全职）· 台北",
+      fr: "Stagiaire ingénieur matériel (temps plein) · Taipei",
+      ja: "ハードウェアエンジニアリング・インターン（フルタイム）· 台北",
+      es: "Practicante de ingeniería de hardware (tiempo completo) · Taipéi",
+      ar: "متدرب هندسة عتاد (دوام كامل) · تايبيه",
+      ko: "하드웨어 엔지니어 인턴(정규직) · 타이베이",
+      vi: "Thực tập sinh kỹ sư phần cứng (toàn thời gian) · Taipei",
+      th: "นักศึกษาฝึกงานวิศวกรรมฮาร์ดแวร์ (เต็มเวลา) · ไทเป",
+      de: "Hardware-Engineering-Praktikant (Vollzeit) · Taipei",
+      nl: "Hardware engineering stagiair (fulltime) · Taipei",
     },
     bullets: {
       en: [
@@ -956,7 +1121,7 @@ export const experience = [
       ],
       fr: [
         "Scripts Python pour relier des configs C++ aux entrées d’équipements de signalisation.",
-        "Utilisation d’outils internes (Piper, google3, Critique) pour l’infra des tests Pixel RF.",
+        "Utilisation d’outils internes (Piper, google3, Critique) pour l’infrastructure des tests Pixel RF.",
         "Requêtes SQL (Spanner) pour générer des structures de clés combinées.",
       ],
       ja: [
@@ -1008,20 +1173,20 @@ export const experience = [
 
   {
     company: "Intel Corporation",
-    period: "January 2021 — November 2021",
+    period: "December 2020 — November 2021",
     role: {
-      en: "Wireless Driver Validation Engineer (Full-time)",
-      "zh-TW": "無線驅動驗證工程師（全職）",
-      "zh-CN": "无线驱动验证工程师（全职）",
-      fr: "Ingénieur validation driver sans fil (temps plein)",
-      ja: "無線ドライバ検証エンジニア（フルタイム）",
-      es: "Ingeniero de validación de drivers inalámbricos (tiempo completo)",
-      ar: "مهندس التحقق من تعريفات اللاسلكي (دوام كامل)",
-      ko: "무선 드라이버 검증 엔지니어(정규직)",
-      vi: "Kỹ sư xác thực driver không dây (toàn thời gian)",
-      th: "วิศวกรตรวจสอบไดรเวอร์ไร้สาย (เต็มเวลา)",
-      de: "Engineer für Wireless-Driver-Validierung (Vollzeit)",
-      nl: "Engineer wireless driver-validatie (fulltime)",
+      en: "Wireless Driver Validation Engineer (Full-time) · Taipei",
+      "zh-TW": "無線驅動驗證工程師（全職）· 台北",
+      "zh-CN": "无线驱动验证工程师（全职）· 台北",
+      fr: "Ingénieur validation driver sans fil (temps plein) · Taipei",
+      ja: "無線ドライバ検証エンジニア（フルタイム）· 台北",
+      es: "Ingeniero de validación de drivers inalámbricos (tiempo completo) · Taipéi",
+      ar: "مهندس التحقق من تعريفات اللاسلكي (دوام كامل) · تايبيه",
+      ko: "무선 드라이버 검증 엔지니어(정규직) · 타이베이",
+      vi: "Kỹ sư xác thực driver không dây (toàn thời gian) · Taipei",
+      th: "วิศวกรตรวจสอบไดรเวอร์ไร้สาย (เต็มเวลา) · ไทเป",
+      de: "Engineer für Wireless-Driver-Validierung (Vollzeit) · Taipei",
+      nl: "Engineer wireless driver-validatie (fulltime) · Taipei",
     },
     bullets: {
       en: [
@@ -1095,18 +1260,18 @@ export const experience = [
     company: "Army Communication Electronics Information Training Center",
     period: "June 2020 — November 2020",
     role: {
-      en: "Signaller — Army Signal Corps",
-      "zh-TW": "通信兵 — 陸軍通信兵科",
-      "zh-CN": "通信兵 — 陆军通信兵科",
-      fr: "Transmissions — Corps des transmissions",
-      ja: "通信兵 — 陸軍通信部隊",
-      es: "Señalista — Cuerpo de comunicaciones",
-      ar: "إشارات — سلاح الإشارة",
-      ko: "통신병 — 통신부대",
-      vi: "Binh chủng thông tin — Quân đoàn thông tin",
-      th: "ทหารสื่อสาร — เหล่าทหารสื่อสาร",
-      de: "Fernmelder — Signal Corps",
-      nl: "Seingever — Signaalkorps",
+      en: "Signaller (Full-time) — Army Signal Corps",
+      "zh-TW": "通信兵（全職）— 陸軍通信兵科",
+      "zh-CN": "通信兵（全职）— 陆军通信兵科",
+      fr: "Transmissions (temps plein) — Corps des transmissions",
+      ja: "通信兵（フルタイム）— 陸軍通信部隊",
+      es: "Señalista (tiempo completo) — Cuerpo de comunicaciones",
+      ar: "إشارات (دوام كامل) — سلاح الإشارة",
+      ko: "통신병(정규직) — 통신부대",
+      vi: "Binh chủng thông tin (toàn thời gian) — Quân đoàn thông tin",
+      th: "ทหารสื่อสาร (เต็มเวลา) — เหล่าทหารสื่อสาร",
+      de: "Fernmelder (Vollzeit) — Signal Corps",
+      nl: "Seingever (fulltime) — Signaalkorps",
     },
     bullets: {
       en: [
@@ -1114,7 +1279,10 @@ export const experience = [
         "Computer network approach and mobile microwave communication system.",
       ],
       "zh-TW": ["行動通訊基礎設施與軍事策略。", "電腦網路與行動微波通訊系統。"],
-      "zh-CN": ["移动通信基础设施与军事策略。", "计算机网络与移动微波通信系统。"],
+      "zh-CN": [
+        "移动通信基础设施与军事策略。",
+        "计算机网络与移动微波通信系统。",
+      ],
       fr: [
         "Infrastructure de communications mobiles et stratégie.",
         "Réseaux informatiques et systèmes de communication micro-ondes mobiles.",
@@ -1131,15 +1299,29 @@ export const experience = [
         "البنية التحتية للاتصالات المتنقلة والاستراتيجية.",
         "نهج شبكات الحاسوب ونظام اتصالات الموجات الدقيقة المتنقلة.",
       ],
-      ko: ["모바일 통신 인프라 및 전략.", "컴퓨터 네트워크 접근과 모바일 마이크로웨이브 통신 시스템."],
-      vi: ["Hạ tầng thông tin di động và chiến lược.", "Tiếp cận mạng máy tính và hệ thống vi ba di động."],
-      th: ["โครงสร้างพื้นฐานการสื่อสารเคลื่อนที่และยุทธศาสตร์", "แนวทางเครือข่ายคอมพิวเตอร์และระบบสื่อสารไมโครเวฟเคลื่อนที่"],
-      de: ["Mobile Kommunikationsinfrastruktur und Strategie.", "Netzwerkansatz und mobiles Mikrowellen-Kommunikationssystem."],
-      nl: ["Mobiele communicatie-infrastructuur en strategie.", "Netwerkbenadering en mobiel microgolfsysteem."],
+      ko: [
+        "모바일 통신 인프라 및 전략.",
+        "컴퓨터 네트워크 접근과 모바일 마이크로웨이브 통신 시스템.",
+      ],
+      vi: [
+        "Hạ tầng thông tin di động và chiến lược.",
+        "Tiếp cận mạng máy tính và hệ thống vi ba di động.",
+      ],
+      th: [
+        "โครงสร้างพื้นฐานการสื่อสารเคลื่อนที่และยุทธศาสตร์",
+        "แนวทางเครือข่ายคอมพิวเตอร์และระบบสื่อสารไมโครเวฟเคลื่อนที่",
+      ],
+      de: [
+        "Mobile Kommunikationsinfrastruktur und Strategie.",
+        "Netzwerkansatz und mobiles Mikrowellen-Kommunikationssystem.",
+      ],
+      nl: [
+        "Mobiele communicatie-infrastructuur en strategie.",
+        "Netwerkbenadering en mobiel microgolfsysteem.",
+      ],
     },
     links: [{ label: "Note", href: "/files/military_note.pdf" }],
   },
-
   {
     company: "Computer Science Learning Center (UW–Madison)",
     period: "January 2019 — May 2019",
