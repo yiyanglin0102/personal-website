@@ -75,8 +75,8 @@ export const dict = {
     nav_contact: "聯絡",
 
     hero_title: "軟體工程師",
-    hero_cta_projects: "看作品",
-    hero_cta_contact: "",
+    hero_cta_projects: "作品",
+    hero_cta_contact: "留言",
 
     projects_subtitle: "最近做的一些專案。",
 
@@ -106,8 +106,8 @@ export const dict = {
     nav_contact: "联系",
 
     hero_title: "软件工程师",
-    hero_cta_projects: "看作品",
-    hero_cta_contact: "",
+    hero_cta_projects: "作品",
+    hero_cta_contact: "联系",
 
     projects_subtitle: "最近的一些项目。",
 
